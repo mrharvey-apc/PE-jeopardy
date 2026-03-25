@@ -89,7 +89,20 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 .score-team.active-team::after { content: '▼'; position: absolute; bottom: -18px; color: var(--gold); font-size: 11px; z-index: 5; }
 .score-team-name { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(10px, 1.8vw, 16px); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .score-value { font-family: 'Bebas Neue', sans-serif; font-size: clamp(20px, 3.5vw, 32px); color: var(--gold); line-height: 1; }
-.turn-bar { background: rgba(245,197,24,0.1); border-bottom: 1px solid rgba(245,197,24,0.18); text-align: center; padding: 6px; font-size: 13px; font-weight: 600; color: var(--gold); flex-shrink: 0; letter-spacing: 1px; }
+.turn-bar { background: rgba(245,197,24,0.1); border-bottom: 1px solid rgba(245,197,24,0.18); display: flex; align-items: center; justify-content: center; padding: 6px 12px; font-size: 13px; font-weight: 600; color: var(--gold); flex-shrink: 0; letter-spacing: 1px; position: relative; }
+.turn-bar-text { flex: 1; text-align: center; }
+.btn-quit { position: absolute; right: 12px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: var(--muted); font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 600; padding: 5px 12px; cursor: pointer; transition: all 0.18s; letter-spacing: 0; }
+.btn-quit:hover { background: rgba(255,100,100,0.2); border-color: rgba(255,100,100,0.4); color: #ff8888; }
+.confirm-overlay { position: fixed; inset: 0; z-index: 150; background: rgba(0,0,0,0.87); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+.confirm-overlay.open { opacity: 1; pointer-events: all; }
+.confirm-box { background: var(--royal); border: 2px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 32px 40px; text-align: center; display: flex; flex-direction: column; gap: 20px; width: min(400px, 90vw); }
+.confirm-title { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--gold); letter-spacing: 3px; }
+.confirm-sub { font-size: 14px; color: var(--muted); }
+.confirm-buttons { display: flex; gap: 12px; justify-content: center; }
+.btn-confirm-end { background: #e63946; color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 900; letter-spacing: 2px; border: none; border-radius: 8px; padding: 12px 24px; cursor: pointer; transition: all 0.18s; }
+.btn-confirm-end:hover { background: #ff4f5e; transform: translateY(-1px); }
+.btn-confirm-cancel { background: rgba(255,255,255,0.08); color: var(--muted); font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 12px 24px; cursor: pointer; transition: all 0.18s; }
+.btn-confirm-cancel:hover { background: rgba(255,255,255,0.14); color: var(--white); }
 .jeopardy-grid { flex: 1; display: grid; overflow: hidden; }
 .grid-cell { display: flex; align-items: center; justify-content: center; border: 2px solid rgba(255,255,255,0.06); text-align: center; padding: 6px; position: relative; overflow: hidden; }
 .grid-cell.header { background: var(--royal); cursor: default; flex-direction: column; gap: 4px; border-bottom: 3px solid rgba(245,197,24,0.3); }
@@ -206,7 +219,10 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 <div class="screen" id="screen-board">
   <div class="board-wrapper">
     <div class="score-bar" id="score-bar"></div>
-    <div class="turn-bar" id="turn-bar"></div>
+    <div class="turn-bar" id="turn-bar">
+      <span class="turn-bar-text" id="turn-bar-text"></span>
+      <button class="btn-quit" onclick="showQuitConfirm()">✕ End Game</button>
+    </div>
     <div class="jeopardy-grid" id="jeopardy-grid"></div>
   </div>
 </div>
@@ -837,7 +853,7 @@ function renderScoreBar() {
 }
 
 function renderTurnBar() {
-  document.getElementById('turn-bar').textContent=`${GAME.getCurrentTeam().name}'s turn to pick`;
+  document.getElementById('turn-bar-text').textContent=`${GAME.getCurrentTeam().name}'s turn to pick`;
 }
 
 function renderGrid() {
@@ -941,6 +957,19 @@ document.getElementById('btn-play-again').addEventListener('click',()=>{
   showScreen('screen-unit');
 });
 
+function showQuitConfirm() {
+  document.getElementById('confirm-quit').classList.add('open');
+}
+
+function hideQuitConfirm() {
+  document.getElementById('confirm-quit').classList.remove('open');
+}
+
+function endGameNow() {
+  hideQuitConfirm();
+  showFinalScreen();
+}
+
 function launchConfetti() {
   const colors=['#f5c518','#e63946','#2196f3','#4caf50','#ff9800','#9c27b0','#fff'];
   for (let i=0;i<130;i++) {
@@ -953,5 +982,16 @@ function launchConfetti() {
   }
 }
 </script>
+<!-- QUIT CONFIRM -->
+<div class="confirm-overlay" id="confirm-quit">
+  <div class="confirm-box">
+    <div class="confirm-title">End Game?</div>
+    <div class="confirm-sub">This will end the current game and show the final scores.</div>
+    <div class="confirm-buttons">
+      <button class="btn-confirm-cancel" onclick="hideQuitConfirm()">Keep Playing</button>
+      <button class="btn-confirm-end" onclick="endGameNow()">End Game</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
