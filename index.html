@@ -24,7 +24,6 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 #stars { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
 .star { position: absolute; background: var(--white); border-radius: 50%; animation: twinkle var(--dur) ease-in-out infinite alternate; }
 @keyframes twinkle { from { opacity: 0.1; } to { opacity: 0.7; } }
-/* UNIT SELECT */
 #screen-unit { gap: 40px; background: radial-gradient(ellipse at 50% 0%, #1a2a80 0%, var(--navy) 70%); }
 .logo-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(52px, 10vw, 100px); color: var(--gold); letter-spacing: 6px; line-height: 1; text-shadow: 0 0 40px rgba(245,197,24,0.4), 4px 4px 0px #8a6a00; text-align: center; }
 .logo-sub { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(13px, 2vw, 18px); color: var(--muted); letter-spacing: 4px; text-transform: uppercase; text-align: center; margin-top: 4px; }
@@ -34,7 +33,6 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 .unit-card-label { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--gold); letter-spacing: 4px; line-height: 1; }
 .unit-card-sub { font-size: 13px; color: var(--muted); margin-top: 8px; letter-spacing: 1px; }
 .unit-card-count { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 6px; }
-/* SETUP */
 #screen-setup { gap: 0; padding: 20px; background: radial-gradient(ellipse at 50% 0%, #1a2a80 0%, var(--navy) 70%); justify-content: flex-start; padding-top: 24px; }
 .setup-container { width: 100%; max-width: 1200px; display: flex; flex-direction: column; gap: 20px; position: relative; z-index: 1; }
 .setup-header { display: flex; align-items: center; gap: 16px; }
@@ -69,7 +67,6 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 .btn-start { display: block; width: 100%; max-width: 340px; margin: 0 auto; background: var(--gold); color: var(--navy); font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 4px; border: none; border-radius: var(--radius); padding: 16px 32px; cursor: pointer; transition: all 0.18s; box-shadow: 0 4px 20px rgba(245,197,24,0.35); }
 .btn-start:hover { background: #ffe033; transform: translateY(-2px); }
 .btn-start:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
-/* LOADING */
 #screen-loading { gap: 28px; background: radial-gradient(ellipse at 50% 50%, #1a2a80 0%, var(--navy) 70%); }
 .loading-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 6vw, 60px); color: var(--gold); letter-spacing: 5px; text-align: center; }
 .loading-sub { color: var(--muted); font-size: 15px; text-align: center; }
@@ -80,7 +77,6 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 .loading-step.done { color: #7fff7f; }
 .loading-step.active { color: var(--white); }
 .step-icon { font-size: 18px; width: 24px; text-align: center; }
-/* BOARD */
 #screen-board { flex-direction: column; padding: 0; justify-content: flex-start; overflow: hidden; }
 .board-wrapper { display: flex; flex-direction: column; width: 100%; height: 100vh; }
 .score-bar { display: flex; align-items: stretch; background: var(--royal); border-bottom: 3px solid var(--gold); min-height: 62px; flex-shrink: 0; }
@@ -114,7 +110,6 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 .grid-cell.answered { background: #050a28 !important; cursor: default !important; transform: none !important; }
 .grid-cell.answered .point-value { display: none; }
 .grid-cell.answered::after { content: '✓'; color: rgba(255,255,255,0.1); font-size: clamp(28px, 6vw, 60px); }
-/* MODAL */
 .modal-overlay { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.87); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; padding: 20px; }
 .modal-overlay.open { opacity: 1; pointer-events: all; }
 .modal { background: var(--royal); border: 3px solid var(--gold); border-radius: 16px; width: min(820px, 95vw); padding: 28px 36px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 0 60px rgba(245,197,24,0.2), var(--shadow); transform: scale(0.92); transition: transform 0.3s; max-height: 90vh; overflow-y: auto; }
@@ -138,7 +133,6 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 .modal-instructions { font-size: 12px; color: var(--muted); text-align: center; }
 .btn-exit-question { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: var(--muted); font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 600; padding: 7px 14px; cursor: pointer; transition: all 0.18s; }
 .btn-exit-question:hover { background: rgba(255,100,100,0.2); border-color: rgba(255,100,100,0.4); color: #ff8888; }
-/* FINAL */
 #screen-final { background: radial-gradient(ellipse at 50% 20%, #1a2a80 0%, var(--navy) 65%); gap: 22px; padding: 32px 20px; }
 .final-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 9vw, 90px); color: var(--gold); letter-spacing: 6px; text-align: center; }
 .final-winner-box { background: rgba(245,197,24,0.1); border: 2px solid var(--gold); border-radius: 16px; padding: 22px 40px; text-align: center; }
@@ -262,25 +256,10 @@ html, body { height: 100%; font-family: 'Barlow', sans-serif; background: var(--
 </div>
 
 <script>
-/* ================================================================
-   CONTENT DATABASE
-   ================================================================
-   HOW TO ADD A CHAPTER:
-   1. Find the chapter block below (e.g. UNIT 1-2 > CHAPTER 1)
-   2. Update: name, topics array (id, name, icon, description)
-   3. For each topic: set available: true and paste content between backticks
-   4. Topics with available: false show as "coming soon"
-   ================================================================ */
-
 const UNITS = {
-
-  /* ============================================================
-     UNIT 1-2  (11 chapters)
-     ============================================================ */
   u12: {
     label: "Unit 1-2",
     chapters: [
-      // ── CH 1: Structure and Functions of the Musculoskeletal System ──
       { id:"u12_ch1", name:"Musculoskeletal System", topics:[
         { id:"u12_ch1_t1", name:"Skeletal System", icon:"🦴", description:"Bones, joints & anatomical movements", available:true, content:`The musculoskeletal system is made up of the skeletal system (bones, joints, ligaments and tendons) and muscular system (muscles). The skeletal system is made up of 206 bones and encompasses all the bones, every joint and corresponding ligaments.
 
@@ -342,9 +321,9 @@ Tibialis anterior: dorsi flexion (e.g. freestyle kick).
 Hamstrings (biceps femoris, semitendinosus, semimembranosus): hip extension and knee flexion (e.g. running).
 Gastrocnemius: plantar flexion (e.g. calf raises).
 Soleus: plantar flexion (e.g. ballet toe point).` },
-        { id:"u12_ch1_t3", name:"Muscle Fibres", icon:"🔬", description:"Fibre types, arrangement & sliding filament theory", available:true, content:`Common features of all muscles: nervous control (nerve stimuli control muscle action), excitability (receive and respond to stimulus), contractility (contract and become thicker), extensibility (capacity to stretch when force applied), elasticity (return to original size/shape once stretched), atrophy (decrease in size due to injury, illness or lack of exercise), hypertrophy (increase in size with increased activity).
+        { id:"u12_ch1_t3", name:"Muscle Fibres", icon:"🔬", description:"Fibre types, arrangement & sliding filament theory", available:true, content:`Common features of all muscles: nervous control, excitability (receive and respond to stimulus), contractility (contract and become thicker), extensibility (capacity to stretch), elasticity (return to original size/shape), atrophy (decrease in size due to injury/illness/lack of exercise), hypertrophy (increase in size with increased activity).
 
-Muscle fibre arrangement: Fusiform — fibres run length of muscle belly in same direction as tendon, designed for mobility, large range contractions, low force (e.g. sartorius and biceps). Pennate — fibres run at angles to tendons, designed for strength and power. Three categories: unipennate (fibres on one side of central tendon, e.g. semimembranosus, tibialis anterior), bipennate (fibres on either side of central tendon, e.g. rectus femoris), multipennate (fibres branch from several tendons — greatest force production, e.g. deltoid). Convergent — fibres radiate from main tendon, compromise between fusiform and pennate, strength/power with mobility (e.g. pectoralis major).
+Muscle fibre arrangement: Fusiform — fibres run length of muscle belly in same direction as tendon, designed for mobility, large range contractions, low force (e.g. sartorius and biceps). Pennate — fibres run at angles to tendons, designed for strength and power. Three categories: unipennate (fibres on one side of central tendon, e.g. semimembranosus, tibialis anterior), bipennate (fibres on either side of central tendon, e.g. rectus femoris), multipennate (fibres branch from several tendons — greatest force production, e.g. deltoid). Convergent — fibres radiate from main tendon, compromise between fusiform and pennate (e.g. pectoralis major).
 
 Structure of skeletal muscles: Epimysium — outer layer of connective tissue covering whole muscle, thickens to form tendons. Fasciculi — bundles of muscle fibres running length of muscle. Endomysium — connective tissue surrounding each individual muscle fibre. Perimysium — connective tissue surrounding fasciculi.
 
@@ -352,55 +331,49 @@ The muscle fibre: Sarcolemma (cell membrane). Sarcoplasm (gel-like fluid contain
 
 Sarcomeres: smallest contractile unit, bounded by Z lines. I band — actin only. A band — both actin and myosin (equates length of myosin filaments). H zone — myosin only (gap between ends of actin).
 
-Sliding filament theory: At rest — little contact between actin and myosin. Nerve impulse arrives at neuromuscular junction — calcium released. Calcium allows myosin to attach to actin. ATP breakdown enables cross bridges on myosin to attach to actin and pull in rowing action. Cross bridges detach and reattach, shortening sarcomere. Z lines move closer together, I band reduces in width, A band remains same length, H zone may disappear. Every sarcomere shortens — whole muscle contracts. Muscle relaxes when actin and myosin lose contact (cross bridges detach from actin). Muscle tone — some myosin stays attached to actin so muscle never completely relaxes, allows quick activation, helps maintain posture.
+Sliding filament theory: At rest — little contact between actin and myosin. Nerve impulse arrives at neuromuscular junction — calcium released. Calcium allows myosin to attach to actin. ATP breakdown enables cross bridges on myosin to attach to actin and pull in rowing action. Cross bridges detach and reattach, shortening sarcomere. Z lines move closer together, I band reduces in width, A band remains same length, H zone may disappear. Every sarcomere shortens — whole muscle contracts. Muscle relaxes when actin and myosin lose contact (cross bridges detach from actin). Muscle tone — some myosin stays attached to actin so muscle never completely relaxes.
 
 Three types of muscle fibres:
 Type 1 (Slow-twitch oxidative): red in colour, small fibre size, small motor neuron. High resistance to fatigue, low force production, slow contraction speed. High mitochondrial density, high capillary density, high myoglobin content. High oxidative capacity, low glycolytic capacity. Major fuel: triglycerides. Suited to aerobic, low-intensity, longer duration (marathons, triathlons, cross-country skiing).
 
-Type 2A (Fast-twitch oxidative): pinkish in colour, medium fibre size, large motor neuron. Medium resistance to fatigue, medium force production, fast contraction. High mitochondrial density, high capillary density, high myoglobin content. Medium oxidative capacity, high glycolytic capacity. Major fuel: creatine phosphate/glycogen. Suited to middle-distance running and swimming (aerobic and anaerobic elements).
+Type 2A (Fast-twitch oxidative): pinkish in colour, medium fibre size, large motor neuron. Medium resistance to fatigue, medium force production, fast contraction. High mitochondrial density, high capillary density, high myoglobin content. Medium oxidative capacity, high glycolytic capacity. Major fuel: creatine phosphate/glycogen. Suited to middle-distance running and swimming.
 
 Type 2B (Fast-twitch glycolytic): white in colour, large fibre size, very large motor neuron. Low resistance to fatigue, high force production, very fast contraction. Low mitochondrial density, low capillary density, low myoglobin content. Low oxidative capacity, high glycolytic capacity. Major fuel: creatine phosphate/glycogen. Suited to high-intensity, short-duration anaerobic work (sprinting, throwing, weightlifting).
 
 On average, most muscles contain about 50% fast-twitch and 50% slow-twitch fibres. Proportions are genetically determined.` },
-        { id:"u12_ch1_t4", name:"Neural Control", icon:"⚡", description:"Motor units, size principle & force production", available:true, content:`Neural control of muscles — initiation of muscular activity: To enable conscious control of muscles, brain must send electrical nervous messages. Messages travel down spinal cord to motor nerves branching from spinal cord. Motor nerve separates into smaller motor neurons attaching to individual muscles. Gap at neuromuscular junction (synaptic cleft) crossed using acetylcholine (neurotransmitter). Muscle contracts for as long as brain sends messages and energy lasts.
+        { id:"u12_ch1_t4", name:"Neural Control", icon:"⚡", description:"Motor units, size principle & force production", available:true, content:`Neural control of muscles: brain sends electrical nervous messages down spinal cord to motor nerves. Motor nerve separates into smaller motor neurons attaching to individual muscles. Gap at neuromuscular junction (synaptic cleft) crossed using acetylcholine (neurotransmitter). Muscle contracts for as long as brain sends messages and energy lasts.
 
-Motor units: A motor unit consists of one motor neuron and the muscle fibres it stimulates. One motor neuron does NOT stimulate the entire muscle. Small motor units — precise movements (hand muscles for writing, typing, throwing darts) where one neuron stimulates only a few fibres. Large motor units — gross movements (quadriceps for running, kicking) where one neuron stimulates thousands of fibres.
+Motor units: A motor unit consists of one motor neuron and the muscle fibres it stimulates. Small motor units — precise movements (hand muscles for writing, typing, throwing darts) where one neuron stimulates only a few fibres. Large motor units — gross movements (quadriceps for running, kicking) where one neuron stimulates thousands of fibres.
 
 All or nothing principle: Nerve impulse will not stimulate muscle fibres until reaching threshold level. Once threshold reached, ALL fibres of the motor unit contract simultaneously and maximally. If impulse too weak, NO fibres contract at all. Intensity of contractions varied by: (1) number of motor units stimulated — more for heavy lifting, fewer for golf putting; (2) frequency of impulses arriving at motor unit — faster frequency equals greater contraction.
 
 Size principle (Henneman principle): Recruitment starts with small motor units and progresses to large motor units. Small motor units recruited first at low muscle forces (e.g. walking). Increase in force from walking to sprinting leads to recruitment of larger motor units.
 
-Small motor units characteristics: slow contracting, easily excitable and recruited, fatigue resistant, used for prolonged activities (walking, posture control).
-
-Large motor units characteristics: fast contracting, less easily excitable and recruited, rapidly fatigable, used for high force activities (sprinting, hitting, jumping).
-
-Motor unit activation, recruitment and force production. Force development depends on: number and type of motor units activated, size of the muscle, initial length of muscle being activated, angle of the joint, muscle's speed of action.
+Small motor units: slow contracting, easily excitable and recruited, fatigue resistant, used for prolonged activities (walking, posture control).
+Large motor units: fast contracting, less easily excitable and recruited, rapidly fatigable, used for high force activities (sprinting, hitting, jumping).
 
 Fast-twitch motor units produce more force because: larger cell body and more axons, innervate 300-800 muscle fibres. Slow-twitch motor unit has small cell body and innervates 10-180 muscle fibres. Large muscles have more muscle fibres so they can produce more force than smaller muscles.` },
         { id:"u12_ch1_t5", name:"Contractions & Levers", icon:"🏋️", description:"Types of contraction, muscle roles & lever systems", available:true, content:`Three types of muscular contractions:
 Concentric contraction — muscle length shortens as force is produced. Muscle develops sufficient tension to overcome resistance. Example: biceps curl upward phase (biceps shortens to lift dumbbell).
-Eccentric contraction — muscle length lengthens as force is produced. Occurs to decelerate motion of a joint, resist gravity. Example: lowering body during sit-up, lowering during squat, setting down an object. Similar to a drawbridge being lowered with control.
-Isometric contraction — force is developed but no change in muscle length. Produces the most force, causes muscle to tire quickly. Examples: rugby scrum, rock climbing, amateur wrestling holds, trapeze in sailing, grip on stick/racquet, plank exercise.
+Eccentric contraction — muscle length lengthens as force is produced. Occurs to decelerate motion of a joint, resist gravity. Example: lowering body during sit-up, lowering during squat.
+Isometric contraction — force is developed but no change in muscle length. Produces the most force, causes muscle to tire quickly. Examples: rugby scrum, rock climbing, plank exercise.
 
-Muscle origin and insertion: Origin — fixed end, attached to more stationary bone, tends to be more proximal, often widespread to anchor the muscle. Insertion — moving end, attached to more moveable bone, tends to be more distal, attaches via strong non-elastic tendon. When muscle contracts, origin and insertion drawn together, shortening muscle.
+Muscle origin and insertion: Origin — fixed end, attached to more stationary bone, tends to be more proximal. Insertion — moving end, attached to more moveable bone, tends to be more distal, attaches via strong non-elastic tendon. When muscle contracts, origin and insertion drawn together, shortening muscle.
 
 Four muscle roles during movement: Agonist (prime mover) — causes the major action. Antagonist — relaxes and lengthens to allow movement, causes opposite action to agonist. Synergist (assistant) — assists agonist, reduces excessive movements. Stabiliser (fixator) — ensures joint remains stable, contracts minimally.
 
-Example of elbow flexion: biceps = agonist; triceps = antagonist; brachialis and brachioradialis = synergists; abdominals/erector spinae = stabilisers for netball shooting.
+Example of elbow flexion: biceps = agonist; triceps = antagonist; brachialis and brachioradialis = synergists; abdominals/erector spinae = stabilisers.
 
 Reciprocal inhibition: process of agonist contracting while antagonist relaxes. Allows efficient, smooth movement. Nervous system controls timing and force for coordinated movement. Beginners appear jerky because reciprocal inhibition is not yet coordinated.
 
-Levers: A lever is a rigid structure that rotates around a fixed point. Three components: Axis — the joint in the body. Force — the muscles that contract to generate force. Resistance — the bone of the body and whatever is being held/moved.
+Levers: A lever is a rigid structure that rotates around a fixed point. Three components: Axis (the joint), Force (the muscles that contract), Resistance (the bone and whatever is being held/moved).
 
 Third-class lever (most common in human body): Force is located between the axis and resistance. Force (muscle insertion) is close to axis (joint). Resistance (body part/object) is furthest from axis. Built to amplify speed and range of motion. Example: biceps curl — axis = elbow joint, force = biceps insertion on radius, resistance = lower arm and weight.
 
-Levers and equipment: Longer levers increase range of motion and speed. Sports equipment (racquets, sticks, bats) increases lever length. Hockey stick example: axis = shoulder, force = deltoid moving arm/stick, resistance = ball. This is known as mechanical disadvantage (trades force for speed/distance).
-
-Kicking action example: Quadriceps (force) contract, pulling on tibia. Knee joint = axis. Knee extension occurs. Foot (resistance) moves to kick ball.` },
+Levers and equipment: Longer levers increase range of motion and speed. Sports equipment (racquets, sticks, bats) increases lever length. This is known as mechanical disadvantage (trades force for speed/distance).` },
       ]},
-      // ── CH 2: Injuries and Illnesses of the Musculoskeletal System ──
       { id:"u12_ch2", name:"Injuries & Illnesses", topics:[
-        { id:"u12_ch2_t1", name:"Injuries & Illnesses", icon:"🩹", description:"Acute, chronic, overuse injuries & musculoskeletal conditions", available:true, content:`Musculoskeletal injuries are a common occurrence during physical activity. Sports injuries can occur via accidents, poor training practices, improper equipment, clothing and footwear, and not being in proper condition.
+        { id:"u12_ch2_t1", name:"Injuries & Illnesses", icon:"🩹", description:"Acute, chronic, overuse injuries & musculoskeletal conditions", available:true, content:`Musculoskeletal injuries are common during physical activity. Causes: accidents, poor training practices, improper equipment, clothing and footwear, and not being in proper condition.
 
 Acute injury: occurs quickly and for which pain and loss of function is immediate. Classified as direct (external force) or indirect (internal force).
 Direct injuries caused by external force — collisions between people, direct contact with equipment. Likely injuries: bruise, cork, fracture, cut, concussion.
@@ -410,580 +383,460 @@ Chronic injuries: tend to start out as acute, then recur as result of re-injury 
 
 Soft-tissue injuries: A tear occurs when connective tissue (muscles, tendons, ligaments) is excessively stretched or ruptured. Strain — muscle or tendon (e.g. strained hamstring). Sprain — ligament (e.g. sprained ankle). Classified by grade: Grade 1 (minimal loss of strength), Grade 2 (moderate tear, moderate loss of function), Grade 3 (severe tear, complete loss of function). Contusion (bruise) — caused by bleeding into soft tissue from direct blow.
 
-Hard tissue injuries: Fracture — break to the bone, can be closed or open (compound) where bone breaks through skin. Caused by direct trauma (blow) or indirect trauma (falling on outstretched hand). Signs: pain, swelling, bruising, tenderness, difficulty moving, deformity. Dislocation — bones forming joint being displaced, damage to hard tissue and surrounding connective tissue. Signs: pain, swelling, tenderness, deformity, loss of movement. Partial dislocation is subluxation.
+Hard tissue injuries: Fracture — break to the bone, can be closed or open (compound) where bone breaks through skin. Signs: pain, swelling, bruising, tenderness, difficulty moving, deformity. Dislocation — bones forming joint being displaced, damage to hard tissue and surrounding connective tissue. Signs: pain, swelling, tenderness, deformity, loss of movement. Partial dislocation is subluxation.
 
-Overuse injuries: caused by excessive and repeated use of same muscle, bone or joint, usually diagnosed by inflammation and pain. Internal causes: muscle imbalance, anatomical problems such as poor posture. External causes: training errors, incorrect technique, uneven surfaces or hard running tracks.
-Types: Shin splints — pain/inflammation in muscles, poor posture, excessive training, fallen arches. Osteitis pubis — groin pain, high running loads, frequent direction changes, kicking action. Stress fracture — tenderness and swelling, high-impact sports, increasing activity too quickly. Patellar tendonitis — patellar tendon inflamed, running/jumping activities. Tennis/golfer's elbow — recurring pain outside upper forearm, poor technique, poor equipment.
+Overuse injuries: caused by excessive and repeated use of same muscle, bone or joint. Internal causes: muscle imbalance, anatomical problems such as poor posture. External causes: training errors, incorrect technique, uneven surfaces or hard running tracks.
+Types: Shin splints, Osteitis pubis, Stress fracture, Patellar tendonitis, Tennis/golfer's elbow.
 
-Overtraining: when individual trains without allowing body to recover sufficiently. Symptoms: decrease in physical performance, increased fatigue, persistent muscle soreness, mood disturbances, feeling of being burnt-out. Physiological symptoms: persistent fatigue, chronic muscle soreness, increased/decreased morning resting heart rate, earlier onset of fatigue, decreased performance in strength and power testing. Psychological symptoms: decreased concentration, decreased motivation, increased irritability, depression, increased anxiety. Prevention: structuring sessions to include adequate rest and recovery, gradual increases in training loads.
+Overtraining: training without allowing body to recover sufficiently. Physiological symptoms: persistent fatigue, chronic muscle soreness, increased/decreased morning resting heart rate, earlier onset of fatigue, decreased performance. Psychological symptoms: decreased concentration, decreased motivation, increased irritability, depression. Prevention: structuring sessions to include adequate rest and recovery, gradual increases in training loads.
 
-Musculoskeletal illnesses: Arthritis — characterised by inflammation of joints causing pain and stiffness. Affects 3.6 million Australians (15%). More common in females and prevalence increases with age after 45. Types: Juvenile arthritis (children under 16, larger joints like knees/ankles/wrists/elbows, causes not fully understood). Osteoarthritis (people 40-55, weightbearing joints like hip/knee/ankle, caused by age, physical inactivity, excess body weight, joint trauma, repetitive stress). Rheumatoid arthritis (any age, more likely over 60, smaller joints like hands and feet, autoimmune response attacking joint tissues).
+Musculoskeletal illnesses: Arthritis — inflammation of joints causing pain and stiffness. Affects 3.6 million Australians (15%). Types: Juvenile arthritis (children under 16), Osteoarthritis (people 40-55, weightbearing joints, caused by age, physical inactivity, excess body weight), Rheumatoid arthritis (any age, autoimmune response attacking joint tissues).
 
-Osteoporosis: thinning and weakening of bone making it very fragile. Occurs when bone loses minerals (particularly calcium) quicker than body can replace them. Affects 3.8% of Australian population. More common in women, higher incidence over age 55. Called the silent disease as little to no symptoms until fracture occurs. Risk factors: sedentary behaviour, lack of exercise, poor calcium intake, vitamin D deficiencies. Prevention: regular participation in weight-bearing activities, nutritious diet including calcium and vitamin D rich foods.` },
-        { id:"u12_ch2_t2", name:"Prevention Strategies", icon:"🛡️", description:"Warm up, cool down & rehabilitation", available:true, content:`Sports injury prevention strategies include any processes completed by a coach, athlete or sports administrator to minimise the risk of injury. Up to 50 per cent of sporting injuries are preventable.
-
-High-risk sport characteristics: high levels of physical contact, high-impact activity, heavy physical demands requiring maximal exertion, high training volume (e.g. swimming and gymnastics requiring 6-9 sessions per week), long seasons of competition or no breaks between seasons.
+Osteoporosis: thinning and weakening of bone. Occurs when bone loses minerals (particularly calcium) quicker than body can replace them. Affects 3.8% of Australian population. More common in women, higher incidence over age 55. Called the "silent disease" — little to no symptoms until fracture occurs. Prevention: regular weight-bearing activities, nutritious diet including calcium and vitamin D.` },
+        { id:"u12_ch2_t2", name:"Prevention Strategies", icon:"🛡️", description:"Warm up, cool down & rehabilitation", available:true, content:`Sports injury prevention: up to 50% of sporting injuries are preventable.
 
 Preventative actions: pre-participation screening, developing physical fitness appropriate to the activity, developing correct skills and techniques, completing adequate warm up, stretching and cool down procedures, rehabilitating previous injuries.
 
-Pre-participation screening: undertaken prior to commencing or increasing physical activity. Can take form of questionnaires (medical history, current conditions, allergies, family history, previous injuries) and/or physical examinations (height, weight, blood pressure).
-
-Physical preparation: training should ensure athletes achieve appropriate fitness levels specific to the sport. Correctly apply principles of training — specificity, progressive overload, intensity and frequency. Fatigue is one of the most common causes of injury but physically fit athletes do not fatigue as quickly.
-
 Warm up: activities undertaken at beginning of training session to prepare body physiologically and psychologically. Physiological benefits: increases heart rate and respiratory rate, increased delivery of oxygen to working muscles, increases blood flow to muscles and muscle temperature, increases elasticity of muscle fibres and tendons, increases enzyme activity within muscle cells. Psychological benefit: prepares mind for competition, increases focus, attention and concentration.
 
-Phases of warm up: General phase — low to moderate intensity cardiovascular whole body activities (jogging, cycling, swimming). Dynamic stretching — body actively moving through full range of motion (leg kicks, side swings, lunges, arm swings). Sport/activity-specific phase — activities involving agility, speed and acceleration related to specific muscles and joints used. Run-throughs, high knee-lift running, skill drills that replicate specific movement patterns.
+Phases of warm up: General phase — low to moderate intensity cardiovascular whole body activities (jogging, cycling, swimming). Dynamic stretching — body actively moving through full range of motion (leg kicks, side swings, lunges, arm swings). Sport/activity-specific phase — activities involving agility, speed and acceleration related to specific muscles and joints used.
 
-By warming up the muscles, risk of injury is reduced (particularly muscle strains and tears) because there is increased range of motion and decreased stiffness of connective tissue.
+Cool down: low-intensity activity completed at end of training session. Gradual reduction in intensity followed by static and PNF stretching of major muscles. Aims: prevent venous pooling, ensure metabolic waste products such as lactic acid are broken down faster, reduce potential for muscle soreness, allow body to return to resting physiological state.
 
-Cool down: low-intensity activity completed at end of training session. Gradual reduction in intensity followed by static and PNF stretching of major muscles. Aims: prevent venous pooling, ensure metabolic waste products such as lactic acid are broken down faster, reduce potential for muscle soreness, allow body to return to resting physiological state. Static stretching — taking joint through full range of motion and holding for minimum 10 seconds. PNF stretching — fully lengthening muscle and isometrically contracting it against resistance before stretching again.
+Static stretching — taking joint through full range of motion and holding for minimum 10 seconds. PNF stretching — fully lengthening muscle and isometrically contracting it against resistance before stretching again.
 
-Rehabilitation: process of returning to optimal functioning as well as reducing chance of re-injury. Components: Treatment — RICER (Rest, Ice, Compression, Elevation, Referral) to manage pain and inflammation, medication, ultrasound. Mobility — stretching exercises to increase range of motion of joint or flexibility of muscle. Strength — resistance exercises using bodyweight, TheraBands or free weights. Return to physical activity — gradually engage in sport-specific exercises progressing from low-intensity to high-intensity sprinting and agility work. Questions before return: Is injured area pain free? Can it be moved through full range of motion? Is there enough strength? Are you mentally prepared?` },
-        { id:"u12_ch2_t3", name:"Physical Aids", icon:"🦺", description:"Protective equipment, taping & braces", available:true, content:`Protective equipment is designed to reduce the risk of injury to athletes, especially the effect of impact and collisions. Important considerations: worn during training and games, fits correctly, specific and appropriate for sport, size and age of athlete, regularly checked and maintained.
+Rehabilitation: process of returning to optimal functioning as well as reducing chance of re-injury. Components: Treatment — RICER (Rest, Ice, Compression, Elevation, Referral). Mobility — stretching exercises to increase range of motion. Strength — resistance exercises using bodyweight, TheraBands or free weights. Return to physical activity — gradually engage in sport-specific exercises progressing from low to high intensity. Questions before return: Is injured area pain free? Can it be moved through full range of motion? Is there enough strength? Are you mentally prepared?` },
+        { id:"u12_ch2_t3", name:"Physical Aids", icon:"🦺", description:"Protective equipment, taping & braces", available:true, content:`Protective equipment is designed to reduce the risk of injury to athletes. Important: worn during training and games, fits correctly, specific and appropriate for sport, size and age of athlete, regularly checked and maintained.
 
-Types of protective equipment: Mouthguard — boxing, collision sports, football codes — prevents dental injury (teeth knocked out, chipped, broken, mandible injury). Goggles/glasses — skiing, squash, swimming — prevents eye injury. Helmet/face shield — baseball, cycling, cricket, fencing, hockey — prevents broken jaw, skull fracture, facial lacerations, concussion. Lower leg/shin padding — baseball, cricket, hockey, soccer, volleyball — prevents lower limb contusion and broken bones. Upper body/chest padding — baseball, cricket, gridiron, hockey — prevents broken/fractured ribs and contusion. Gloves — boxing, cricket, hockey — prevents broken/dislocated fingers and contusion. Wrist/forearm guard — inline skating, snowboarding — prevents broken/fractured wrist. Footwear — athletics, basketball, football codes, cricket, golf — prevents shin splints, strains/sprains, stress fractures.
+Types: Mouthguard (boxing, collision sports), Goggles (skiing, squash, swimming), Helmet/face shield (baseball, cycling, cricket, hockey), Lower leg/shin padding (baseball, cricket, hockey, soccer), Upper body/chest padding (baseball, cricket, gridiron), Gloves (boxing, cricket, hockey), Wrist/forearm guard (inline skating, snowboarding), Footwear (athletics, basketball, football codes, cricket, golf).
 
-Footwear: Good running shoes help prevent shin splints, overpronation/underpronation of foot, and Achilles tendon problems. Characteristics: good grip, stability for quick direction changes, cushioning for shock absorption (gel pads or air bladders), flexibility to allow foot to flex, comfort, correct fit. Orthotics prescribed by podiatrist for congenital defects such as flat feet, high arches, unequal leg length.
+Footwear: Characteristics of good running shoes: good grip, stability for quick direction changes, cushioning for shock absorption (gel pads or air bladders), flexibility to allow foot to flex, comfort, correct fit. Orthotics prescribed by podiatrist for congenital defects such as flat feet, high arches, unequal leg length.
 
-Taping: use of strapping tape to limit range of movement in a joint. Used as preventative measure (especially in high-risk activities like ankles in netball) or in rehabilitation after injury. Enhances proprioceptive feedback. Types: rigid strapping tape (restricts movement, provides mechanical support), soft elastic bandages (for initial injury, compresses soft tissue, reduces swelling). Basic techniques: anchors, stirrups, figure of six, figure of eight. Potential harms: irritation of skin, reduced circulation if too tight, tape loses elasticity over time. Kinesiology tape — thinner and more elastic, less restrictive, allows muscle support without compromising range of motion. Applied in I shape (linear), Y shape (larger muscles like deltoid), X shape (large long muscles like hamstring). Benefits: pain relief, greater range of motion, can wear longer.
+Taping: use of strapping tape to limit range of movement in a joint. Used as preventative measure or in rehabilitation. Enhances proprioceptive feedback. Types: rigid strapping tape (restricts movement, provides mechanical support), soft elastic bandages (for initial injury, compresses soft tissue, reduces swelling). Basic techniques: anchors, stirrups, figure of six, figure of eight. Potential harms: irritation of skin, reduced circulation if too tight, tape loses elasticity over time. Kinesiology tape — thinner and more elastic, less restrictive, allows muscle support without compromising range of motion. Applied in I shape (linear), Y shape (larger muscles like deltoid), X shape (large long muscles like hamstring). Benefits: pain relief, greater range of motion.
 
-Braces: play similar role to taping in prevention of sports injuries. Athlete can apply themselves. Can be expensive but good quality brace lasts longer. Used for prevention of sporting injuries and for musculoskeletal conditions like arthritic joints.
+Braces: play similar role to taping. Athlete can apply themselves. Can be expensive but good quality brace lasts longer.
 
 Proprioception: the ability of the muscles, tendons and joints to receive and process stimuli about their position. Taping can enhance proprioceptive feedback, especially after previous injury.` },
       ]},
-      // ── CH 3: Performance Enhancement of the Musculoskeletal System ──
       { id:"u12_ch3", name:"Performance Enhancement", topics:[
-        { id:"u12_ch3_t1", name:"Training Methods", icon:"🏋️", description:"Resistance, plyometric, interval & flexibility training", available:true, content:`PERFORMANCE ENHANCEMENT: any method, device or substance that has the potential to physiologically improve performance. Can be permitted (training methods, nutritional supplements) or prohibited (synthetic hormones). Performance-enhancing substances and methods improve performance by: influencing the physiological capacity of a particular body system; removing physiological constraints that affect performance; increasing the speed of recovery.
+        { id:"u12_ch3_t1", name:"Training Methods", icon:"🏋️", description:"Resistance, plyometric, interval & flexibility training", available:true, content:`PERFORMANCE ENHANCEMENT: any method, device or substance that has the potential to physiologically improve performance. Can be permitted (training methods, nutritional supplements) or prohibited (synthetic hormones).
 
-ANAEROBIC TRAINING METHODS:
+RESISTANCE TRAINING: exercises a muscle or group of muscles against a resistance. Physiological effects: increased muscle size, mass and fuel stores; increased bone density and strength. Potential harms: overtraining (not allowing enough recovery); injury (lifting too heavy a weight or using incorrect technique). Types: concentric and eccentric (free weights, machine weights, body weight); isometric.
 
-Resistance training: involves exercising a muscle or group of muscles against a resistance. Most common training method used to develop muscular strength, power or endurance.
-Physiological effects: increased muscle size, mass and fuel stores; increased bone density and strength.
-Benefits: increased capacity to produce greater strength and/or power required to run faster, throw or kick further, or jump higher.
-Potential harms: overtraining (not allowing enough recovery between sessions for muscles to repair and grow); injury (lifting too heavy a weight or using incorrect technique, placing stress on muscles, bones and joints).
-Types: concentric and eccentric (free weights, machine weights, body weight); isometric. Mechanical aids include tyres, parachutes, elastic cords and weighted vests — provide added resistance while completing sport-specific movement.
+PLYOMETRIC TRAINING: aims to increase muscular power by first stretching a muscle (eccentric contraction) and then contracting it (concentric contraction) in the shortest time possible. Takes advantage of the stretch-shortening cycle (stretch reflex). Benefits: allows athlete to produce more explosive power when running, jumping, kicking or throwing. Potential harms: considerable stress on body and joints; can cause injury through muscle tearing. Low-impact drills: skipping, low hops, step and jumps, throwing a light medicine ball. High-impact drills: bounding with alternate legs, clap push-ups, jumping on/over/from 35 cm benches.
 
-Plyometric training: aims to increase muscular power by first stretching a muscle (eccentric contraction) and then contracting it (concentric contraction) in the shortest time possible.
-Takes advantage of the stretch-shortening cycle (stretch reflex) — body attempts to resist sudden change in muscle length by calling on the stretched muscle to contract, preventing tearing. Trains this reflex to develop more powerful muscle contraction.
-Benefits: allows athlete to produce more explosive power when running, jumping, kicking or throwing.
-Potential harms: considerable stress on body and joints, not recommended for individuals with poor fitness; should start with low-impact activities before progressing; can cause injury through muscle tearing if not completed correctly.
-Low-impact drills: skipping, low hops, step and jumps, throwing a light (2.5 kg) medicine ball.
-High-impact drills: bounding with alternate legs, clap push-ups, jumping on/over/from 35 cm benches, throwing a heavy medicine ball (above 4 kg).
+INTERVAL TRAINING: set periods of work followed by set periods of rest or recovery. Short interval: ATP-CP energy system, 95%+ MHR, work-to-rest ratio 1:5+. Intermediate interval: anaerobic glycolysis, 85-90% MHR, work-to-rest ratio 1:3. Benefits: adaptations at muscular level allowing athletes to run faster through improved speed, muscular power and anaerobic capacity.
 
-Interval training: set periods of work followed by set periods of rest or recovery repeated several times. Allows repeated high-intensity work periods that improve speed, muscular power, anaerobic capacity and agility.
-Short interval: ATP-CP energy system, 95%+ MHR, work-to-rest ratio 1:5+. Suitable for 100m sprints, intermittent team sports.
-Intermediate interval: anaerobic glycolysis, 85-90% MHR, work-to-rest ratio 1:3. Suitable for 200m sprint, intermittent team sports.
-Benefits: adaptations at muscular level allowing athletes to run faster through improved speed, muscular power and anaerobic capacity. Useful for team sports where work-to-rest ratio resembles game situations.
-Potential harms: increased risk of injury due to inadequate fitness levels and incorrect application of training principles; not allowing enough recovery between sessions.
-
-CHRONIC MUSCULAR ADAPTATIONS — ANAEROBIC TRAINING:
-Muscular hypertrophy; increased number and size of myofibrils; increased stores of ATP, CP and glycogen; increased glycolytic capacity; increased speed and force of contractions; increased tolerance to accumulation of metabolic by-products.
-Benefits to performance: increased muscular strength, muscular power, anaerobic capacity and/or speed; greater strength and force created by muscle; greater capacity to produce energy quickly; faster speed of muscle contraction; greater ability to continue to work at higher intensities; increased capacity to tolerate by-products and delay onset of fatigue.
+CHRONIC MUSCULAR ADAPTATIONS — ANAEROBIC TRAINING: muscular hypertrophy; increased number and size of myofibrils; increased stores of ATP, CP and glycogen; increased glycolytic capacity; increased speed and force of contractions.
 
 AEROBIC TRAINING METHODS:
-Continuous training: continuous activity lasting minimum 20 minutes at 70-85% HR max. Example: runners, swimmers or cyclists exercising for 30 minutes at 80% HR max.
-Fartlek: continuous activity with surges of higher intensity throughout the session (increase in pace or running up a hill). Example: stride hard 30 seconds, jog 90 seconds recovery; repeat.
-Long interval training: intervals lasting 1-5 minutes, work at 85% HR max, rest periods passive or active at lower intensity, work-to-rest ratio 1:1, 1:0 or 2:1.
+Continuous training: continuous activity lasting minimum 20 minutes at 70-85% HR max.
+Fartlek: continuous activity with surges of higher intensity throughout the session.
+Long interval training: intervals lasting 1-5 minutes, work at 85% HR max, work-to-rest ratio 1:1 or 2:1.
 
-CHRONIC MUSCULAR ADAPTATIONS — AEROBIC TRAINING:
-Increased size and number of mitochondria; increased myoglobin; increased stores of glycogen and triglycerides; increased capacity to oxidise glucose and fats; increased a-VO2 difference; decreased use of the anaerobic glycolysis system.
-Benefits to performance: increased muscular endurance and/or aerobic power; greater capacity to produce energy due to more sites for aerobic energy production; greater capacity to work for longer due to greater fuel availability; ability to work aerobically at higher intensities for longer; delayed lactate inflection point (LIP) and decreased reliance on anaerobic energy systems.
+CHRONIC MUSCULAR ADAPTATIONS — AEROBIC TRAINING: increased size and number of mitochondria; increased myoglobin; increased stores of glycogen and triglycerides; increased capacity to oxidise glucose and fats; increased a-VO2 difference; decreased use of the anaerobic glycolysis system.
 
-FLEXIBILITY TRAINING: about improving the range of movement at joints that are important for maximum performance. Flexibility is specific to a joint and can vary around the body. Stretching is the most common form of exercise to increase flexibility.
-Static stretching: gradually stretching the muscle across a joint to full range of motion and holding for 15-30 seconds (e.g. standing quadricep stretch). Occurs during cool down.
-Dynamic stretching: controlled movements through the joint's full range of motion (e.g. arm swings). Included in warm up to mimic movements that will occur in the activity.
-PNF (Proprioceptive Neuromuscular Facilitation): using an isometric contraction of the muscles before stretching them through the full range of motion.
-Benefits: increased mobility at a joint, improved posture and body awareness.
-Potential harms: risk of injury through incorrect technique or lack of warm up prior to stretching.
+FLEXIBILITY TRAINING: improving the range of movement at joints. Static stretching: gradually stretching the muscle across a joint to full range of motion and holding for 15-30 seconds. Dynamic stretching: controlled movements through the joint's full range of motion. PNF: using an isometric contraction of the muscles before stretching them. Benefits: increased mobility at a joint, improved posture and body awareness.` },
+        { id:"u12_ch3_t2", name:"Supplements & Hormones", icon:"💊", description:"Nutritional supplements & prohibited hormones", available:true, content:`NUTRITIONAL SUPPLEMENTS: food or preparations ingested in excess of those consumed in a normal diet. Three broad groups: Specialised sports foods, Performance supplements, Dietary supplements. AIS ABCD classification system categorises supplements by scientific evidence. Only Group A supplements have scientific backing.
 
-Exam tip: When describing training methods that enhance the musculoskeletal system, include examples and link them to a physiological benefit. Example: flexibility training includes dynamic stretching such as arm swings — this increases range of motion of the shoulder joint, allowing a full reach in a tennis serve.` },
-        { id:"u12_ch3_t2", name:"Supplements & Hormones", icon:"💊", description:"Nutritional supplements & prohibited hormones", available:true, content:`NUTRITIONAL SUPPLEMENTS: food or preparations ingested in excess of those consumed in a normal diet. Three broad groups:
-1. Specialised sports foods — address specific nutritional needs (sports drinks, sports bars/gels, liquid-meal supplements).
-2. Performance supplements — benefit performance and/or recovery. Scientific evidence supports: creatine, protein, caffeine, sodium bicarbonate.
-3. Dietary supplements — only required if a specific nutritional deficiency is identified (e.g. calcium, iron supplements for female endurance athletes).
-AIS ABCD classification system categorises supplements by amount of scientific evidence. Only Group A supplements have scientific backing and are supported by the AIS.
+CARBOHYDRATES: Glycaemic index (GI) ranks carbohydrates 0-100 by extent to which they raise blood glucose. High GI (70+) = rapidly digested. Low GI (55 or less) = slowly digested, gradual rises in blood glucose. Low-GI foods eaten before event; high-GI foods recommended during and after activity.
 
-CARBOHYDRATES AND SPORTS FOODS:
-Glycaemic index (GI): ranking of carbohydrates on a scale from 0 to 100 according to extent to which they raise blood glucose levels after eating. High GI (70+) = rapidly digested, rapid increase in blood glucose. Low GI (55 or less) = slowly digested, gradual rises in blood glucose.
-Low-GI foods: eaten before an event for sustained release during activity (maximise blood glucose stores).
-High-GI foods: recommended during and after activity to replace and top up stores quickly.
-Potential harms: gastrointestinal upset or bloating.
-
-Carbohydrate loading: used by endurance athletes in events lasting longer than 90 minutes (marathons, triathlons, cross-country skiing) to maximise glycogen stores in muscle and liver. Consume 7-12 grams of carbohydrate per kilogram of body mass with tapering for 36-72 hours prior to the event. During event, consume 30-60g carbohydrate per hour.
-Benefits: able to exercise at optimal pace for longer due to increased glycogen availability.
-Potential harms: bloating, weight gain, gastrointestinal discomfort. Does not work for all athletes.
-
-Sports gels: compact source of carbohydrate (60-70% concentration), large boost of fuel in one serving. Used for sustained high-intensity exercise (>45 min) and endurance exercise (>1 hour). Contain electrolytes and sometimes caffeine. Must be consumed with water — risk of gastrointestinal upset if not.
-Sports bars: compact source of carbohydrate plus protein and micronutrients. Used pre-, during and post-activity. Similar to muesli bars. Concern: overuse replacing nutritious whole foods.
-Liquid-meal supplements: carbohydrate-rich, protein-moderate, low-fat powder or liquid. Useful for athletes increasing lean body mass, heavy training, or growth spurts. Also useful as post-exercise recovery snack in first 30 minutes after exercise.
-Sports drinks: provide both fluid and carbohydrate (6-8% carbohydrate, 10-25 mmol/L electrolyte — sodium and potassium). Ideal before, during or after training/competition. Electrolyte replacement maintains desire to drink and reduces further fluid loss. Potential harms: overconsumption, gastrointestinal discomfort, dental erosion.
+Carbohydrate loading: used by endurance athletes in events lasting longer than 90 minutes to maximise glycogen stores. Consume 7-12g carbohydrate per kg body mass with tapering for 36-72 hours prior to event. During event, consume 30-60g carbohydrate per hour.
 
 PERFORMANCE SUPPLEMENTS:
-Creatine: naturally occurring compound in skeletal muscle. Created through intake of fish, poultry and red meat. Creatine monohydrate is the commonly supplemented form.
-Benefits: enhances performance involving repeated sprints or bouts of high-intensity, short-duration activity separated by recovery intervals of less than 1 minute. Recommended for elite athletes using resistance training to increase lean body mass, or team athletes in intermittent sports (netball, football, racquet sports).
-AIS protocols: Rapid loading (20g daily in 4x5g doses for 5 days — linked to fluid retention); Slow loading (3g per day). Should be taken with 50-100g carbohydrates to enhance uptake. Maintenance dose 3g daily.
-Potential harms: weight gain due to fluid retention, cramps, possible liver and kidney damage if taken in excess of recommended doses.
+Creatine: naturally occurring compound in skeletal muscle. Enhances performance involving repeated sprints or bouts of high-intensity, short-duration activity. Rapid loading (20g daily in 4x5g doses for 5 days); Slow loading (3g per day). Potential harms: weight gain due to fluid retention, cramps, possible liver and kidney damage if taken in excess.
 
-Protein supplements: function in growth and repair of muscle tissue and cells. Found naturally in red meat, poultry, nuts, eggs, legumes. Available as drink, bar or powder.
-Benefits: increased muscle protein synthesis → increased muscle cross-sectional area → greater storage of fuels and greater ability to produce strength and power. Best consumed immediately after exercise (muscle uptake of amino acids enhanced for up to 24 hours).
-Whey protein: most common supplement form (rapidly digested, rich in branched chain amino acids). Types: isolate (highest protein, all lactose and fat removed), concentrate (high protein, small amounts lactose/fat), hydrolysate (combination).
-Potential harms: may displace other important nutrients; excessive intake places extra demand on kidneys; can compromise bone density; may lead to weight gain if food choices also high in fat. Protein >2g/kg BM does not stimulate further muscle building.
+Protein supplements: function in growth and repair of muscle tissue. Best consumed immediately after exercise. Whey protein: most common supplement form (rapidly digested, rich in branched chain amino acids). Potential harms: may displace other important nutrients; excessive intake places extra demand on kidneys; may lead to weight gain. Protein >2g/kg BM does not stimulate further muscle building.
 
-Caffeine: removed from WADA prohibited list January 2004. Acts on CNS to stimulate release of adrenaline and alters perception of effort and fatigue.
-Benefits: likely enhances endurance sports (>60 min), brief sustained high-intensity sports (1-60 min), team and intermittent sports, single efforts involving strength or power.
-Effective dose: 1-3 mg/kg BM or 70-200mg. More than 3mg/kg BM does not further increase performance.
-Potential harms: increased heart rate, impairment of technique, over-arousal, anxiety, insomnia. Great individual variability in response. Habitual users can build tolerance.
+Caffeine: removed from WADA prohibited list January 2004. Acts on CNS to stimulate release of adrenaline and alters perception of effort and fatigue. Effective dose: 1-3 mg/kg BM. More than 3mg/kg BM does not further increase performance. Potential harms: increased heart rate, impairment of technique, over-arousal, anxiety, insomnia.
 
-Sodium bicarbonate: increases body's ability to dispose of excess hydrogen ions produced during anaerobic glycolysis. Acts as a buffer within the muscle, reducing the fatiguing effect of hydrogen. Relevant to high-intensity events lasting 1-7 minutes.
-AIS protocols: Acute loading (200-400mg/kg BM, 2-2.5 hours prior); Chronic loading (500mg/kg BM per day over 5 days, split into 5 doses).
-Potential harms: main side effect is gastrointestinal upset. Should not be combined with caffeine or creatine.
+Sodium bicarbonate: increases body's ability to dispose of excess hydrogen ions produced during anaerobic glycolysis. Relevant to high-intensity events lasting 1-7 minutes. Potential harms: gastrointestinal upset.
 
 PROHIBITED SUBSTANCES — HORMONES:
-Doping: use by, or distribution to, an athlete of certain substances or methods that could artificially improve physical and/or mental condition and enhancing performance. Prohibited because they: artificially enhance performance; are potentially harmful to the athlete's health; are contrary to the spirit of sport.
-WADA (World Anti-Doping Agency): established 1999, international independent agency. Mission: to promote, coordinate and monitor the fight against doping in sport in all its forms. Produces prohibited substances and methods list annually.
+Doping: use by or distribution to an athlete of certain substances or methods that could artificially improve physical and/or mental condition. Prohibited because: artificially enhance performance; potentially harmful to athlete's health; contrary to the spirit of sport.
+WADA: established 1999, produces prohibited substances and methods list annually.
 
-Anabolic steroids (WADA classification S1 Anabolic agents): synthetically produced drugs that mimic the effect of testosterone. Testosterone has anabolic effect (promotes bone density, muscle growth, rapid recovery from injury) and androgenic effect (development and maintenance of male secondary sexual characteristics).
-Performance benefits: increased lean muscle mass and strength; reduced fatigue; increased rate of recovery; increased aggression; allows faster muscle growth than resistance training alone.
-Examples: nandrolone, stanozolol, tetrahydrogestrinone (THG).
-Potential harms in males: possible infertility, increased libido, testicular atrophy, baldness, development of breast tissue.
-Potential harms in females: menstrual problems, increased body and facial hair, enlarged clitoris, deepening of the voice.
-Potential harms in both: tendon injury, fluid retention, liver damage, tremors, mood swings and depression, hypertension, acne (face and back), cancer.
-Permitted alternative: resistance training, plyometric training, short interval training, protein supplementation.
+Anabolic steroids (S1 Anabolic agents): synthetically produced drugs that mimic testosterone. Performance benefits: increased lean muscle mass and strength; reduced fatigue; increased rate of recovery; increased aggression. Potential harms: infertility, testicular atrophy, baldness, development of breast tissue (males); menstrual problems, increased body and facial hair (females); tendon injury, fluid retention, liver damage, mood swings, hypertension, acne, cancer (both). Permitted alternatives: resistance training, plyometric training, protein supplementation.
 
-Human Growth Hormone (HGH) (WADA classification S2 Growth factors): peptide hormone naturally produced by the pituitary gland. Determines height, bone and muscle growth.
-Examples: growth hormone releasing hormone (GHRH), insulin-like growth factor-1 (IGF-1), Hexarelin.
-Performance benefits: enhanced muscle and bone development; increased muscle size and strength; reduced recovery time; increased healing time from injury. Any performance benefits most likely from taking combination of steroids and HGH.
-Potential harms: fluid retention, acromegaly, thickened skin, hypertension, hairiness, cardiac disease, osteoarthritis, joint and bone pain.
-Permitted alternative: resistance training, plyometric training, short interval training, protein supplementation.
-
-Exam tip: Permitted and prohibited substances generally have the same benefit (enhance performance), but potential harms for prohibited substances are often more severe. When comparing, clearly identify similarities and differences. Example: both resistance training and anabolic steroids induce muscle hypertrophy to increase strength and power (similarity). However, anabolic steroids are more likely to cause physiological harms such as mood swings and depression, compared to resistance training where injury from incorrect technique is more likely (difference).` },
+Human Growth Hormone (HGH) (S2 Growth factors): peptide hormone naturally produced by pituitary gland. Performance benefits: enhanced muscle and bone development; increased muscle size and strength; reduced recovery time. Potential harms: fluid retention, acromegaly, thickened skin, hypertension, cardiac disease, osteoarthritis. Permitted alternatives: resistance training, plyometric training, protein supplementation.` },
       ]},
-      // ── CH 4: Structure and Functions of the Cardiovascular System ──
       { id:"u12_ch4", name:"Cardiovascular System", topics:[
-        { id:"u12_ch4_t1", name:"Heart, Blood & Vessels", icon:"❤️", description:"Structure of the heart, blood & blood vessels", available:true, content:`CARDIOVASCULAR SYSTEM: consists of the heart, blood and blood vessels. Functions: circulate blood; transport water, oxygen and nutrients to cells; transport wastes (carbon dioxide) away from cells; help maintain correct body temperature; help fight disease through white blood cells and antibodies.
+        { id:"u12_ch4_t1", name:"Heart, Blood & Vessels", icon:"❤️", description:"Structure of the heart, blood & blood vessels", available:true, content:`CARDIOVASCULAR SYSTEM: consists of the heart, blood and blood vessels. Functions: circulate blood; transport water, oxygen and nutrients to cells; transport wastes (carbon dioxide) away from cells; help maintain correct body temperature; help fight disease.
 
-STRUCTURE OF THE HEART:
-The heart has four chambers — two atria (upper chambers that receive blood) and two ventricles (lower chambers that pump blood). The septum divides the heart into two pumps: left pump (left atrium and left ventricle — oxygenated blood for the body) and right pump (right atrium and right ventricle — deoxygenated blood to the lungs). Blood in the two pumps does not mix.
+STRUCTURE OF THE HEART: Four chambers — two atria (upper chambers that receive blood) and two ventricles (lower chambers that pump blood). Septum divides heart into two pumps: left pump (oxygenated blood for the body) and right pump (deoxygenated blood to the lungs). Blood in the two pumps does not mix.
 
-Valves: Bicuspid/mitral valve — left side of heart. Tricuspid valve — right side of heart. One-way valves allow blood to travel in one direction, stopping blood in ventricles from flowing back into the atria. The apex of the heart (left ventricle) is tilted slightly left, downwards and forwards for optimal blood flow.
+Valves: Bicuspid/mitral valve — left side. Tricuspid valve — right side. One-way valves allow blood to travel in one direction, stopping blood in ventricles from flowing back into the atria.
 
-Cardiac cycle: the movement of blood through the heart in one heartbeat. Systole = contraction of the heart muscle (specifically the ventricles), forcing blood out via ventricles into arteries. Diastole = relaxation of the heart muscle, heart fills with blood from veins. Cycle: atria contract (systole) while ventricles relax (diastole), then ventricles contract (systole) while atria relax (diastole).
+Cardiac cycle: the movement of blood through the heart in one heartbeat. Systole = contraction of the heart muscle (specifically the ventricles), forcing blood out via ventricles into arteries. Diastole = relaxation of the heart muscle, heart fills with blood from veins.
 
-Exam tip: Write 'left ventricle' specifically — it is responsible for pumping blood into the aorta.
-
-BLOOD COMPONENTS:
-Blood cells make up 45% of blood volume; plasma makes up 55%. Each individual has approximately 4-5 litres of blood; takes around one minute to circulate at rest.
+BLOOD COMPONENTS: Blood cells make up 45% of blood volume; plasma makes up 55%.
 Red blood cells (about 41%): transport oxygen around the body. Contain haemoglobin which carries oxygen.
 White blood cells (about 4%): protect against disease.
 Platelets (0.01%): cause blood to clot.
-Plasma (about 55%): clear yellowish fluid, over 90% water. Carries blood cells; provides cells with proteins, salts, glucose, fats, antibodies and some oxygen; removes waste products.
+Plasma (about 55%): clear yellowish fluid, over 90% water. Carries blood cells; provides proteins, salts, glucose, fats, antibodies and some oxygen; removes waste products.
 
-BLOOD VESSELS — Three types:
-Arteries: large, thick, elastic wall. Carry blood AWAY from the heart. Always carry oxygen-rich blood. Aorta = largest artery (from left ventricle to the body). Artery walls are elastic — expand with each heartbeat. Two coronary arteries supply oxygen and nutrients to the cardiac muscle (heart muscle) — branch from aorta. Arteries progressively narrow and become arterioles.
-Capillaries: small, thin wall, only ONE cell thick. Site of exchange for nutrients and wastes between cells and cardiovascular system. Exchange of oxygen, carbon dioxide, nutrients and heat occurs here. Exercise may increase number of capillaries supplying blood to muscles. Precapillary sphincters — one-way valves that control blood flow within capillaries; open during exercise to allow more blood to working muscles (vasodilation).
-Veins: thin, large diameter, one-way valves. Carry blood BACK to the heart. Carry deoxygenated blood (lower oxygen, high carbon dioxide). Return of blood depends on contraction of skeletal muscles — squeezes veins, one-way valves force blood upwards towards heart against gravity. Venous pooling — collection of blood in leg veins when high-intensity activity stops too suddenly; prevented by gradual cool down.
+BLOOD VESSELS:
+Arteries: large, thick, elastic wall. Carry blood AWAY from the heart. Always carry oxygen-rich blood. Aorta = largest artery (from left ventricle to the body). Two coronary arteries supply oxygen to the cardiac muscle. Arteries progressively narrow and become arterioles.
+Capillaries: small, thin wall, only ONE cell thick. Site of exchange for nutrients and wastes between cells and cardiovascular system. Exchange of oxygen, carbon dioxide, nutrients and heat occurs here. Precapillary sphincters — one-way valves that control blood flow within capillaries; open during exercise to allow more blood to working muscles (vasodilation).
+Veins: thin, large diameter, one-way valves. Carry blood BACK to the heart. Carry deoxygenated blood. Return of blood depends on contraction of skeletal muscles — squeezes veins, one-way valves force blood upwards towards heart against gravity. Venous pooling — collection of blood in leg veins when high-intensity activity stops too suddenly; prevented by gradual cool down.
 
-BLOOD CIRCULATION — two closed circuits:
+BLOOD CIRCULATION:
 Systemic circulation: oxygenated blood transported from left ventricle → aorta → arteries around body → deoxygenated blood returns via vena cava → right atrium.
-Pulmonary circulation: deoxygenated blood from right ventricle → pulmonary artery → lungs → oxygenated blood returns via pulmonary vein → left atrium.
+Pulmonary circulation: deoxygenated blood from right ventricle → pulmonary artery → lungs → oxygenated blood returns via pulmonary vein → left atrium.` },
+        { id:"u12_ch4_t2", name:"Thermoregulation & Exercise Responses", icon:"🌡️", description:"Vasodilation, vasoconstriction, HR, SV & cardiac output", available:true, content:`THERMOREGULATION: maintenance of core body temperature within 36.5-37.5°C. Monitored by the hypothalamus. Mechanisms: sweating, shivering, controlling blood flow.
 
-10-step blood flow sequence: (1) Pulmonary circulation — heart to lungs via pulmonary artery, returns oxygenated via pulmonary vein. (2) Left ventricle contracts, pushes oxygenated blood into aorta. (3) Aorta branches into smaller arteries. (4) Arteries branch into arterioles taking oxygen-rich blood to extremities. (5) Arterioles provide gateway to capillaries. (6) Precapillary sphincters constrict/relax to allow blood to capillaries. (7) Capillaries exchange oxygen, nutrients and by-products with body cells. (8) Venules collect blood from capillaries. (9) Veins collect oxygen-poor blood from tissues. (10) Superior/inferior vena cava bring oxygen-poor blood back to right atrium.
+VASODILATION: blood vessels increase their diameter, causing an increase in blood flow. When body is too hot → cardiovascular system directs more blood flow to skin surface → increased sweating and heat loss.
 
-Pulse sites: Carotid (neck) and radial (wrist). Quick heart rate method: count for 10 seconds × 6 = beats per minute.` },
-        { id:"u12_ch4_t2", name:"Thermoregulation & Exercise Responses", icon:"🌡️", description:"Vasodilation, vasoconstriction, HR, SV & cardiac output", available:true, content:`THERMOREGULATION: maintenance of core body temperature within a narrow range (36.5-37.5°C). Body temperature monitored by the hypothalamus. Mechanisms: sweating, shivering, controlling blood flow to the skin and around the body.
+VASOCONSTRICTION: blood vessels narrow or constrict, causing a decrease in blood flow. When body is too cold → cardiovascular system restricts blood flow to skin → redirects to internal organs → decreases heat loss.
 
-VASODILATION: blood vessels increase their diameter, causing an increase in blood flow. When body is too hot → cardiovascular system directs more blood flow to skin surface → increased sweating and heat loss to external environment → blood vessels expand (vasodilate).
+HYPERTHERMIA: rise in core temperature above 37.5-38.3°C. Core temperature rises >3°C can result in impairment of bodily and mental functions, and heat stroke (which can be fatal). Redirection of blood = less blood to working muscles = impaired performance. High humidity reduces cooling efficiency.
 
-VASOCONSTRICTION: blood vessels narrow or constrict, causing a decrease in blood flow. When body is too cold → cardiovascular system restricts blood flow to skin → redirects to internal organs → decreases heat loss → blood vessels reduce in size (vasoconstrict).
-
-Process of sweat production during exercise: (1) Body generates heat during exercise → core temperature rises. (2) Hypothalamus triggers cooling response. (3) Blood vessels leading to skin (arteries and arterioles) undergo vasodilation. (4) Increase in blood flow from body's core to surface of skin. (5) Blood at skin's surface undergoes heat transfer to environment. (6) Sweating and continued exercise.
-
-During exercise, blood flow redistributed: at rest — muscle 16%, skin 6%, brain 15%, liver 29%, kidneys 23%. During strenuous exercise — muscle 84%, skin 2%, brain 4%, liver 2%, kidneys 1%.
-
-HYPERTHERMIA: rise in core temperature above 37.5-38.3°C. Core temperature rises >3°C can result in impairment of bodily and mental functions, and heat stroke (which can be fatal). Cardiovascular system assists removal via vasodilation (increased blood flow to skin) and increased sweating. Redirection of blood = less blood to working muscles = impaired performance. Fluid loss through sweating decreases blood plasma volume — important to drink water.
-
-Humidity: high humidity means air cannot hold more water vapour → body cannot effectively evaporate sweat → reduced cooling efficiency. Exercising in hot and humid conditions creates 'stickiness' feeling on skin and greatly increases thermoregulatory stress.
-
-HYPOTHERMIA: reduced core body temperature below 35°C. Body responds via shivering and redirection of blood flow to generate heat. Cardiovascular system redirects blood away from extremities towards major organs → vasoconstriction of blood vessels near skin to reduce heat lost to environment. Performance impaired as blood flow to working muscles also reduced.
-
-Exam tip: When questions refer to 'physiological changes', be specific — vasodilation of arteries is very different from 'widening of blood vessels' because they have different functions.
+HYPOTHERMIA: reduced core body temperature below 35°C. Body responds via shivering and redirection of blood flow. Cardiovascular system redirects blood away from extremities towards major organs → vasoconstriction near skin to reduce heat lost to environment.
 
 ACUTE RESPONSES TO EXERCISE:
-Heart Rate (HR): number of times the heart beats per minute. Increases linearly with exercise intensity. Average resting HR ≈ 72 bpm; up to and beyond 200 bpm during maximal exercise. Maximum HR = 220 minus age. HR returns to resting levels when physical activity ceases.
+Heart Rate (HR): number of times the heart beats per minute. Increases linearly with exercise intensity. Average resting HR ≈ 72 bpm; up to and beyond 200 bpm during maximal exercise. Maximum HR = 220 minus age.
 
-Stroke Volume (SV): amount of blood ejected from left ventricle into aorta with every heartbeat. Measured in mL/beat. SV = end-diastolic volume − end-systolic volume. Increases with exercise intensity but plateaus at approximately 40-60% of maximal exercise capacity (heart beats too fast to fully fill during diastole). Average resting SV: female ≈60 mL/beat, male ≈80 mL/beat. Increases to 110-130 mL/beat during maximal exercise (higher for trained athletes).
+Stroke Volume (SV): amount of blood ejected from left ventricle into aorta with every heartbeat. Measured in mL/beat. SV = end-diastolic volume − end-systolic volume. Increases with exercise intensity but plateaus at approximately 40-60% of maximal exercise capacity. Average resting SV: female ≈60 mL/beat, male ≈80 mL/beat. Increases to 110-130 mL/beat during maximal exercise.
 
 Cardiac Output (Q): amount of blood pumped from heart into arterial system per minute. Q = HR × SV. Measured in litres per minute (L/min). Increases proportionally with exercise intensity.
 At rest: ≈70 bpm × 70 mL/beat ≈ 4.9 L/min.
 Submaximal exercise (steady state): HR ≈140 bpm × SV ≈120 mL/beat ≈ 16.8 L/min. Steady state = oxygen supply equals oxygen demand, energy supplied aerobically.
-Maximal exercise: HR ≈200 bpm × SV ≈120 mL/beat ≈ 24 L/min. At high intensities, increases in cardiac output due to increased HR (not SV, which has plateaued).
-Untrained male max: ≈20 L/min. Untrained female max: ≈15 L/min.
+Maximal exercise: HR ≈200 bpm × SV ≈120 mL/beat ≈ 24 L/min. Untrained male max: ≈20 L/min. Untrained female max: ≈15 L/min.
 
-Systolic blood pressure: average resting BP = 120/80 mmHg. Systolic reading rises during exercise (heart beats more forcefully into arteries). Can reach ≈200 mmHg during maximal exercise. Diastolic reading remains largely unchanged.
+Systolic blood pressure: average resting BP = 120/80 mmHg. Systolic reading rises during exercise (heart beats more forcefully). Can reach ≈200 mmHg during maximal exercise.
 
-Blood flow redistribution: vasodilation of capillaries supplying working muscles → increased blood flow to muscles (12-15% at rest → 80-90% during exercise). Vasoconstriction of capillaries supplying organs → reduced blood flow to gut and kidneys.
-
-Decreased blood volume: blood volumes decrease during exercise due to decrease in plasma levels (loss of fluid through sweating and evaporation, removal of metabolic by-products).
-
-Arteriovenous oxygen difference (a-VO2 diff.): comparison of oxygen in arteries vs veins. Measured in mL/100 mL blood.
+Arteriovenous oxygen difference (a-VO2 diff.): comparison of oxygen in arteries vs veins.
 At rest: arteries = 20 mL/100 mL, veins = 13 mL/100 mL, difference = 7 mL/100 mL.
-During exercise: arteries = 20 mL/100 mL, veins = 5 mL/100 mL, difference = 15 mL/100 mL (working muscles extract more oxygen).
-
-Exam tip: Always state whether the acute response is increasing, decreasing, or plateauing. For example: blood volume DECREASES during physical activity.` },
+During exercise: arteries = 20 mL/100 mL, veins = 5 mL/100 mL, difference = 15 mL/100 mL (working muscles extract more oxygen).` },
       ]},
-      // ── CH 5: Respiratory System ──
       { id:"u12_ch5", name:"Respiratory System", topics:[
-        { id:"u12_ch5_t1", name:"Structure & Function", icon:"🫁", description:"Structure of the respiratory system and gas exchange", available:true, content:`RESPIRATORY SYSTEM: the lungs and associated structures responsible for gas exchange in the body, bringing air into the body and removing waste products.
+        { id:"u12_ch5_t1", name:"Structure & Function", icon:"🫁", description:"Structure of the respiratory system and gas exchange", available:true, content:`RESPIRATORY SYSTEM: the lungs and associated structures responsible for gas exchange in the body.
 
-FIVE FUNCTIONS of the respiratory system:
-1. Brings air from the atmosphere into the lungs.
-2. Transfers oxygen into the blood.
-3. Removes carbon dioxide from the blood.
-4. Expels heat and water vapour in the air breathed out.
-5. Allows the vocal cords to create speech as air is breathed out.
+FIVE FUNCTIONS: (1) Brings air from the atmosphere into the lungs. (2) Transfers oxygen into the blood. (3) Removes carbon dioxide from the blood. (4) Expels heat and water vapour in the air breathed out. (5) Allows the vocal cords to create speech.
 
 STRUCTURE — three main parts of the lungs: the conducting system, the pleura, and the diaphragm.
 
-CONDUCTING SYSTEM elements:
-Nasal cavity — layers of tissue (septa) covered with cilia. Warms and moistens air; cilia filter foreign particles. Smoking destroys cilia.
-Pharynx — back of mouth and nose combined. Channels food to stomach and air to larynx.
-Larynx — contains vocal cords ('Adam's apple' more evident in males). Creates voice as air passes through.
-Trachea — rings of hyaline cartilage (the windpipe). Protected medium for passage of air into the lungs.
-Bronchi — trachea divides into two bronchi (one per lung). Maintain air passage to the lungs.
-Bronchioles — each bronchus subdivides further like tree branches. Deliver air to be diffused by the alveoli.
-Alveoli — microscopic cup-shaped sacs at ends of smallest bronchioles, only one cell thick. Site of gas exchange of oxygen and carbon dioxide. Surrounded by a rich capillary network.
+CONDUCTING SYSTEM: Nasal cavity — warms and moistens air; cilia filter foreign particles. Pharynx — channels food to stomach and air to larynx. Larynx — contains vocal cords. Trachea — rings of hyaline cartilage (the windpipe). Bronchi — trachea divides into two bronchi (one per lung). Bronchioles — each bronchus subdivides further like tree branches. Alveoli — microscopic cup-shaped sacs at ends of smallest bronchioles, only one cell thick. Site of gas exchange of oxygen and carbon dioxide. Surrounded by a rich capillary network.
 
-PLEURA: covers each lung. Gap between membrane and lung filled with fluid allowing lung to expand/contract with minimal friction. Attached to inside of chest cavity and top of diaphragm.
+PLEURA: covers each lung. Gap between membrane and lung filled with fluid allowing lung to expand/contract with minimal friction.
 
-DIAPHRAGM: involuntary (smooth) muscle that contracts and relaxes to aid breathing. As it moves up/down, chest cavity decreases/increases causing inspiration and expiration. A blow to the midriff can cause diaphragm spasm ('winded') — individual must relax and wait for spasm to subside.
+DIAPHRAGM: involuntary (smooth) muscle that contracts and relaxes to aid breathing. As it moves up/down, chest cavity decreases/increases causing inspiration and expiration. A blow to the midriff can cause diaphragm spasm ('winded').
 
-REMOVING CARBON DIOXIDE:
-CO2 production: mitochondria in cells produce CO2 when converting glucose to ATP.
-CO2 diffuses into bloodstream from cells.
-CO2 transported via blood to alveoli.
-Expelled from body on exhalation through: Alveoli → Bronchioles → Bronchi → Trachea → Larynx → Pharynx → Nose or mouth.
+VO2 MAX: maximum amount of oxygen per minute that can be taken in, transported to, and used by working muscles to produce ATP. Reflects aerobic power. Measured in mL/kg/min. Males generally have greater VO2 max due to larger heart and lung capacity.` },
+        { id:"u12_ch5_t2", name:"Mechanics & Gas Exchange", icon:"💨", description:"Breathing mechanics, lung volumes, diffusion and VO2 max", available:true, content:`VENTILATION (V): V = TV × RR. Tidal volume (TV) = amount of air breathed in and out in one breath. Respiratory rate (RR) = number of breaths per minute. Example at rest: V = 0.5 L × 12 breaths/min = 6 L/min.
 
-NASAL vs MOUTH BREATHING: Nasal structures filter, humidify and warm inhaled air while widening airways to enhance oxygen uptake. Mouth breathing appropriate during intense activity (e.g. 400m sprint) for higher volume of air in shorter time, or when nasal congestion present.
-
-Exam tip: Know all anatomical names and functions of each conducting system structure. The alveoli are the KEY site of gas exchange — one cell thick, massive surface area, surrounded by capillaries.` },
-        { id:"u12_ch5_t2", name:"Mechanics & Gas Exchange", icon:"💨", description:"Breathing mechanics, lung volumes, diffusion and VO2 max", available:true, content:`VENTILATION (V): the amount of air inspired and expired during 1 minute.
-Formula: V = TV × RR
-Tidal volume (TV) = amount of air breathed in and out in one breath.
-Respiratory rate (RR) = number of breaths per minute.
-Example at rest: V = 0.5 L × 12 breaths/min = 6 L/min.
-
-INSPIRATION: diaphragm contracts (pulls downward on ribcage), intercostal muscles contract (pull ribcage outward) → chest cavity expands → air pressure inside lungs decreases → air drawn in from high-pressure atmosphere (low to low pressure gradient). Normal tidal volume ≈ 500 mL. During heavy exercise, inspiration can increase to ~4 L per breath. Extra muscles of neck and upper chest assist during exercise.
+INSPIRATION: diaphragm contracts (pulls downward on ribcage), intercostal muscles contract (pull ribcage outward) → chest cavity expands → air pressure inside lungs decreases → air drawn in. Normal tidal volume ≈ 500 mL. During heavy exercise, inspiration can increase to ~4 L per breath.
 
 EXPIRATION: diaphragm and intercostal muscles relax → diaphragm pushes up (dome shape) → chest cavity decreases → pressure inside lungs increases → air forced out. During exercise, abdominal muscles contract to aid speed and force of chest restriction.
 
-Comparison table:
-Inspiration: Air drawn into lungs; low pressure inside; ribcage expands up and out; intercostals contract; diaphragm contracts/moves downward.
-Expiration: Air forced out; high pressure inside; ribcage moves down and in; intercostals relax; diaphragm relaxes/moves upward.
-
-LUNG VOLUMES:
-Total lung capacity: total volume after maximum inspiration ≈ 6 L males, 4.2 L females.
-Vital capacity: maximum air expired after maximum inspiration. Includes inspiratory reserve, tidal volume, expiratory reserve. Larger body = higher vital capacity. Males generally higher than females.
-Tidal volume: air per breath ≈ 500 mL at rest, can dramatically increase during exercise.
-Inspiratory reserve capacity: extra air that can be breathed in beyond normal tidal volume.
-Expiratory reserve capacity: extra air that can be forced out beyond normal expiration.
-Residual volume: air remaining in lungs after maximum expiration (lungs never completely empty).
-
-VO2 MAX (Maximum Oxygen Uptake): maximum amount of oxygen per minute that can be taken in, transported to, and used by working muscles to produce ATP. Reflects aerobic power. Measured in mL/kg/min. Males generally have greater VO2 max due to larger heart and lung capacity. Best measure of cardiovascular, respiratory and muscular system efficiency under exercise.
-Example: person weighing 70 kg with VO2 max of 73.5 mL/kg/min consumes ≈ 5145 mL oxygen/minute.
+LUNG VOLUMES: Total lung capacity ≈ 6 L males, 4.2 L females. Vital capacity: maximum air expired after maximum inspiration. Tidal volume: air per breath ≈ 500 mL at rest. Residual volume: air remaining in lungs after maximum expiration (lungs never completely empty).
 
 GASEOUS EXCHANGE — DIFFUSION: movement of a molecule from higher to lower concentration across a thin membrane.
 
-Alveoli/capillary interface (PULMONARY DIFFUSION):
-During inspiration, alveoli have HIGH O2 concentration → O2 diffuses into surrounding capillaries (LOW O2).
-O2 attaches to haemoglobin in red blood cells → transported to muscles.
-Capillaries have HIGH CO2 → CO2 diffuses into alveoli (LOW CO2) → expelled on exhalation.
-Both alveolar walls and capillary walls are ONE CELL THICK to facilitate rapid diffusion.
+Alveoli/capillary interface (PULMONARY DIFFUSION): During inspiration, alveoli have HIGH O2 concentration → O2 diffuses into surrounding capillaries (LOW O2). O2 attaches to haemoglobin in red blood cells → transported to muscles. Capillaries have HIGH CO2 → CO2 diffuses into alveoli (LOW CO2) → expelled on exhalation. Both alveolar walls and capillary walls are ONE CELL THICK to facilitate rapid diffusion.
 
-Capillary/muscle interface:
-Muscle has LOW O2 (used for energy production) → O2 from HIGH concentration capillaries diffuses into muscle.
-Muscle has HIGH CO2 (by-product of energy production) → CO2 diffuses from muscle into capillaries → transported back to lungs.
+Capillary/muscle interface: Muscle has LOW O2 (used for energy production) → O2 from HIGH concentration capillaries diffuses into muscle. Muscle has HIGH CO2 (by-product of energy production) → CO2 diffuses from muscle into capillaries → transported back to lungs.
 
 Gas composition: Inhaled air: 78% nitrogen, 21% oxygen, 0.04% CO2. Exhaled air: 78% nitrogen, 17% oxygen, 4% CO2.
 
-Exam tip: Always specify the LOCATION of diffusion — pulmonary diffusion (alveoli/capillary) is VERY different to diffusion at the muscle/capillary interface. Marks are lost if location is not stated.` },
+Exam tip: Always specify the LOCATION of diffusion — pulmonary diffusion (alveoli/capillary) is VERY different to diffusion at the muscle/capillary interface.` },
         { id:"u12_ch5_t3", name:"Responses to Exercise", icon:"🏃", description:"Respiratory responses to physical activity and cardiorespiratory interaction", available:true, content:`ACUTE RESPONSES OF THE RESPIRATORY SYSTEM TO EXERCISE:
 
-Factors affecting magnitude of change: intensity (higher intensity = greater changes), duration, type of exercise, individual fitness level (fitter athletes adapt more efficiently), environmental conditions (cold air reduces ability to warm incoming air).
+1. INCREASED RESPIRATORY RATE (RR): At rest: 12-15 breaths/min. High intensity exercise: can reach 35-45 breaths/min. Reason: increased demand for oxygen and need to remove CO2.
 
-1. INCREASED RESPIRATORY RATE (RR):
-At rest: 12–15 breaths per minute.
-High intensity exercise: can reach 35–45 breaths per minute.
-Reason: increased demand for oxygen and need to remove CO2.
+2. INCREASED TIDAL VOLUME (TV): At rest: approximately 0.5 L per breath. Maximal workloads: can increase to 4-5 L per breath. Reason: supply more oxygen to blood for delivery to working muscles.
 
-2. INCREASED TIDAL VOLUME (TV):
-At rest: approximately 0.5 L per breath.
-Maximal workloads: can increase to 4–5 L per breath.
-Reason: supply more oxygen to blood for delivery to working muscles.
+3. INCREASED VENTILATION (V): At rest: approximately 6 L/min (V = 0.5 × 12). Submaximal exercise: approximately 75 L/min (V = 2.5 × 30). Maximal exercise: approximately 180 L/min (V = 4.0 × 45). Both RR and TV increase together to dramatically raise ventilation.
 
-3. INCREASED VENTILATION (V):
-At rest: approximately 6 L/min (V = 0.5 × 12).
-Submaximal exercise: approximately 75 L/min (V = 2.5 × 30).
-Maximal exercise: approximately 180 L/min (V = 4.0 × 45).
-Both RR and TV increase together to dramatically raise ventilation.
+4. INCREASED DIFFUSION: At alveoli/capillary interface AND muscle/capillary interface. Greater amounts of O2 and CO2 exchanged during intense exercise.
 
-4. INCREASED DIFFUSION:
-At alveoli/capillary interface AND muscle/capillary interface.
-Greater amounts of O2 and CO2 exchanged during intense exercise.
-Compensates for rapid oxygen depletion in muscles.
+5. INCREASED OXYGEN UPTAKE (VO2): At rest: ≈ 0.35 L/min. Submaximal exercise: 2.0-3.5 L/min. Maximal exercise: 4-6 L/min (dependent on fitness level). Linear increase until VO2 max is reached (plateau).
 
-5. INCREASED OXYGEN UPTAKE (VO2):
-At rest: ≈ 0.35 L/min.
-Submaximal exercise: 2.0–3.5 L/min.
-Maximal exercise: 4–6 L/min (dependent on fitness level).
-Linear increase until VO2 max is reached (plateau).
-
-6. INCREASED EFFORT — INTERCOSTALS & DIAPHRAGM:
-External and internal intercostals and diaphragm work harder.
-Enables increased expansion and contraction of thoracic cavity.
-Accommodates increased air volumes demanded by working muscles.
+6. INCREASED EFFORT — INTERCOSTALS & DIAPHRAGM: External and internal intercostals and diaphragm work harder.
 
 CARDIOVASCULAR AND RESPIRATORY SYSTEMS INTERACTION:
-The systems work together to deliver oxygen to muscles and remove CO2:
-1. Respiratory system ventilates lungs (inspiration/expiration) — 4 L/min rest, 15–35 L/min exercise.
+1. Respiratory system ventilates lungs — 4 L/min rest, 15-35 L/min exercise.
 2. Pulmonary diffusion (alveoli/capillary interface) — O2 enters blood, CO2 exits blood.
-3. O2 combines with haemoglobin in red blood cells — transported via arteries and heart to muscles.
-Cardiac output: 5 L/min rest → 20–30 L/min during exercise.
+3. O2 combines with haemoglobin in red blood cells — transported via arteries and heart to muscles. Cardiac output: 5 L/min rest → 20-30 L/min during exercise.
 4. O2 diffuses at capillary/muscle interface into muscles for energy production. CO2 diffuses into capillaries.
 5. CO2 transported via veins/heart back to lungs, diffused into alveoli, expired.
 
-PARKRUN EXAMPLE (5-km run) — rest vs end of run:
-Respiratory rate: 12 → 45 breaths/min.
-Tidal volume: 0.5 → 3.5 L.
-Ventilation: 6 → 158 L/min.
-Oxygen uptake: 0.21 → 2.85 L/min.
-Heart rate: 60 → 190 beats/min.
-Stroke volume: 70 → 100 mL/beat.
-Cardiac output: 4.2 → 19 L/min.
-a-VO2 difference: 5 → 15 mL O2/100 mL blood.
+PARKRUN EXAMPLE (5-km run) — rest vs end of run: Respiratory rate: 12 → 45 breaths/min. Tidal volume: 0.5 → 3.5 L. Ventilation: 6 → 158 L/min. Oxygen uptake: 0.21 → 2.85 L/min. Heart rate: 60 → 190 beats/min. Stroke volume: 70 → 100 mL/beat. Cardiac output: 4.2 → 19 L/min. a-VO2 difference: 5 → 15 mL O2/100 mL blood.
 
-VO2 max = Cardiac output × a-VO2 difference. Higher VO2 max = greater capacity to sustain high aerobic speeds.
-
-Exam tip: When asked about changes during exercise, always include the DIRECTION (increase/decrease) and NUMERIC VALUES for rest and exercise where possible.` },
+VO2 max = Cardiac output × a-VO2 difference. Higher VO2 max = greater capacity to sustain high aerobic speeds.` },
       ]},
-      // ── CH 6: Enhancing the Cardiorespiratory System ──
       { id:"u12_ch6", name:"Cardiorespiratory Enhancement", topics:[
         { id:"u12_ch6_t1", name:"Aerobic Training Adaptations", icon:"🚴", description:"Impact of aerobic exercise & aerobic training methods", available:true, content:`AEROBIC EXERCISE: sustained physical effort which increases the rate that oxygen is inhaled and passed from the heart to the bloodstream.
 
 PHYSIOLOGICAL ADAPTATIONS (physical changes due to regular exercise over time):
+CARDIOVASCULAR ADAPTATIONS: Cardiac hypertrophy — increase in size and strength of the LEFT VENTRICLE → improved contractility → more blood pumped with each beat. Increased capacity for blood flow — blood vessels increase in diameter and elasticity → greater oxygen delivery. Increased stroke volume — more blood pumped per beat → heart does not need to beat as frequently at rest and submaximal workloads.
 
-CARDIOVASCULAR ADAPTATIONS:
-Cardiac hypertrophy — increase in size and strength of the LEFT VENTRICLE → improved contractility → more blood pumped with each beat.
-Increased capacity for blood flow — blood vessels increase in diameter and elasticity → smoother blood flow through arteries → greater oxygen delivery.
-Increased stroke volume — more blood pumped per beat → heart does not need to beat as frequently at rest and submaximal workloads.
+RESPIRATORY ADAPTATIONS: Increased diffusion of oxygen at the lungs — greater capacity for O2 and CO2 to diffuse between alveoli and capillaries. Increased lung volume — more air into lungs → more oxygen available. Increased diaphragm strength — lungs fill more effectively.
 
-RESPIRATORY ADAPTATIONS:
-Increased diffusion of oxygen at the lungs — greater capacity for O2 and CO2 to diffuse between alveoli and capillaries.
-Increased lung volume — more air into lungs → more oxygen available for delivery and consumption.
-Increased diaphragm strength — lungs fill more effectively → improved aerobic performance.
-
-OVERALL: Improvement in VO2 max — enhanced capacity to take in and use oxygen = increased energy production = aerobic exercise performed longer or with greater ease.
-Timeline: 8–12 weeks for inactive individuals to see improvements. Cardiovascular adaptations (capillary network expansion, improved circulation, increased mitochondrial density) plus respiratory adaptations (pulmonary diffusion, lung volume) work together.
+OVERALL: Improvement in VO2 max — enhanced capacity to take in and use oxygen = increased energy production = aerobic exercise performed longer or with greater ease. Timeline: 8-12 weeks for inactive individuals to see improvements.
 
 AEROBIC TRAINING METHODS:
-
-Continuous training: Non-stop submaximal activity (70–85% HR max) lasting longer than 20 minutes.
-Benefits: develops aerobic base, improves aerobic power. Favoured by long-distance swimmers, runners, cyclists. Used as pre-season base for team sports.
-Example: 30-minute run at 80% HR max.
-
-Fartlek training: Continuous training involving changes of intensity — works both aerobic and anaerobic energy systems.
-Benefits: simulates interplay in team/individual sports (AFL, basketball, trail running).
-Example: stride hard 30 seconds, jog 90 seconds recovery, repeat.
-
-Long-interval training: Submaximal intensity intervals (work:rest ratio 1:1) of work followed by equal rest or recovery, developing the aerobic energy system.
-Benefits: athletes work at higher intensity (closer to 85% HR max) due to longer rest period, generally with active recovery.
-
-HIIT (High-Intensity Interval Training): Repeated bouts of high-intensity efforts followed by varying periods of complete rest or lower-intensity recovery.
-Benefits: similar cardiovascular adaptations to continuous training but in shorter timeframe with fewer sessions.
+Continuous training: Non-stop submaximal activity (70-85% HR max) lasting longer than 20 minutes. Benefits: develops aerobic base, improves aerobic power. Example: 30-minute run at 80% HR max.
+Fartlek training: Continuous training involving changes of intensity — works both aerobic and anaerobic energy systems. Example: stride hard 30 seconds, jog 90 seconds recovery, repeat.
+Long-interval training: Submaximal intensity intervals (work:rest ratio 1:1) of work followed by equal rest or recovery.
+HIIT (High-Intensity Interval Training): Repeated bouts of high-intensity efforts followed by varying periods of complete rest or lower-intensity recovery. Similar cardiovascular adaptations to continuous training but in shorter timeframe.
 
 CHRONIC CARDIORESPIRATORY ADAPTATIONS from aerobic training:
 Cardiovascular: increased left ventricle size/volume; increased stroke volume; decreased resting/submaximal heart rate; increased maximal cardiac output; increased a-VO2 difference; increased blood/plasma volume; increased red blood cells and haemoglobin.
 Respiratory: increased pulmonary diffusion; increased maximal lung ventilation; increased VO2 max.
-Performance benefits: increased endurance and VO2 max via greater blood flow and O2 delivery to muscles; greater O2-carrying capacity; increased diffusion into muscle for energy production.
+Performance benefits: increased endurance and VO2 max via greater blood flow and O2 delivery to muscles.` },
+        { id:"u12_ch6_t2", name:"Performance Enhancement", icon:"⚗️", description:"Altitude training, EPO, blood doping, beta blockers, gene doping", available:true, content:`ALTITUDE TRAINING (PERMITTED): training at levels greater than 1500 metres above sea level.
+Physiological changes: Increased capillaries, increased natural EPO production, increased red blood cells and haemoglobin, increased mitochondria, increased myoglobin, increased oxidative enzymes, increased buffering capacity. Result: improved VO2 max and enhanced endurance.
+Methods: 'Live high – train low' most common. Can occur at actual altitude (e.g. Falls Creek, Victoria, 1850m) or in hypoxic chambers/rooms/tents.
+Potential harms: sleeplessness, altitude sickness, increased blood viscosity, weight loss, weakened immune system, extreme fatigue at high altitude.
 
-POTENTIAL HARMS of aerobic training: risk of injury from lack of adequate fitness, incorrect training principles, insufficient recovery, incorrect technique, or overtraining.
+EPO — ERYTHROPOIETIN (PROHIBITED — WADA S2): hormone secreted by kidneys stimulating red blood cell production. Synthetic EPO used medically for anaemia/kidney disease. Performance benefits: increased red blood cells and haemoglobin → better O2 transport → greater aerobic endurance and VO2 max. Potential harms: increased blood viscosity → blood clots, stroke risk, heart attack risk; dehydration; cardiac failure.
 
-Exam tip: Use specific subject terminology. NOT 'your heart is more efficient' — INSTEAD 'your heart increases in size and strength, meaning it can contract more forcefully to pump more blood around the body'.` },
-        { id:"u12_ch6_t2", name:"Performance Enhancement", icon:"⚗️", description:"Altitude training, EPO, blood doping, beta blockers, gene doping", available:true, content:`ALTITUDE TRAINING (PERMITTED): training at levels greater than 1500 metres above sea level to induce physiological changes that enhance oxygen-carrying capacity.
+BLOOD DOPING (PROHIBITED — WADA M1): infusing extra human blood (red blood cells) into body before performance. Performance benefits: increased red blood cells → improved O2 delivery via haemoglobin → increased endurance, VO2 max. Potential harms: blood clots, stroke, heart attack, risk of infectious disease from transfusion.
 
-PHYSIOLOGICAL CHANGES from altitude acclimatisation:
-Increased capillaries → greater blood distribution to muscles.
-Increased natural EPO production → stimulates more red blood cell production.
-Increased red blood cells and haemoglobin → greater O2-carrying capacity.
-Increased mitochondria → faster aerobic energy production.
-Increased myoglobin → more O2 stored in muscles.
-Increased oxidative enzymes → faster aerobic energy production.
-Increased buffering capacity → increased waste removal.
-Result: improved VO2 max and enhanced endurance.
+BETA BLOCKERS (PROHIBITED — WADA P2 in precision sports): drugs that block adrenaline hormones from binding to nerve receptors. Performance benefits in sport: reduce pre-competition anxiety; lower heart rate; reduce body tremors → enables athletes in archery, shooting, darts, golf to fire between heartbeats. Potential harms: hypotension, decreased heart rate, hypoglycaemia, cardiac failure, tiredness, decreased endurance.
 
-METHODS: 'Live high – train low' most common (live in low-O2 environment, train in normal O2). Can occur at actual altitude (e.g. Falls Creek, Victoria, 1850m) or in hypoxic chambers/rooms/tents. AFL clubs, AIS, and Victorian Institute of Sport use simulated altitude rooms.
+GENE DOPING (PROHIBITED — WADA since 2003): use of substances or techniques to manipulate cells or genes to improve athletic performance. Involves nucleic acids or nucleic acid analogues to alter genome sequences or gene expression. CRISPR-Cas9: gene editing tool — scans DNA and cuts at target site. Repoxygen (2004): segment of DNA designed to stimulate EPO synthesis. Why appealing: proteins from gene doping can be nearly identical to natural proteins — extremely hard to detect. Potential harms: largely unknown.
 
-POTENTIAL HARMS of altitude:
-Moderate altitude (1500–3000m): increased heart rate and breathing rate, sleeplessness, altitude sickness from 2000m, increased blood viscosity (thicker blood → slower O2 delivery).
-High altitude (3000m+): weight loss, weakened immune system, extreme fatigue, severely reduced exercise intensity.
+ETHICAL CONSIDERATIONS: Arguments against: unfair advantage, amounts to cheating, strips medals (e.g. Lance Armstrong — 7 Tour de France titles stripped). Arguments for permitting (Savulescu): supervised doping within safe physiological parameters. Essendon FC (2016): 34 players received 12-month WADA suspensions. Russia: state-sanctioned doping scandal — banned from multiple Olympics.
 
-EPO — ERYTHROPOIETIN (PROHIBITED — WADA S2):
-Natural: hormone secreted by kidneys stimulating red blood cell production in bone marrow.
-Synthetic: used medically for anaemia/kidney disease. Athletes use synthetic EPO to gain endurance advantage.
-Benefits: increased red blood cells and haemoglobin → better O2 transport → greater aerobic endurance and VO2 max.
-Potential harms: increased blood viscosity (thickening) → blood clots, stroke risk, heart attack risk; dehydration; cardiac failure; infection risk from injections.
-Permitted alternative: aerobic training or altitude training.
-
-BLOOD DOPING (PROHIBITED — WADA M1):
-Process: infusing extra human blood (red blood cells) into body before performance. Can be athlete's own blood (removed, stored, re-infused) or compatible donor blood. Body replaces removed red blood cells in meantime.
-Benefits: increased red blood cells → improved O2 delivery via haemoglobin → increased endurance, VO2 max, aerobic capacity.
-Potential harms: same as EPO (blood viscosity, clots, stroke, heart attack, dehydration); PLUS risk of infectious disease from transfusion and blood becoming toxic from incorrect storage.
-Permitted alternative: aerobic training or altitude training.
-
-BETA BLOCKERS (PROHIBITED — WADA P2 in precision sports):
-What they are: drugs that block adrenaline hormones from binding to nerve receptors, reducing their effect on heart and blood vessels. Legally prescribed for high blood pressure, angina, cardiac arrhythmias.
-Benefits in sport: reduce pre-competition anxiety; lower heart rate; reduce body tremors → enables athletes in archery, shooting, darts, golf to fire between heartbeats with steady hand.
-Potential harms: hypotension (low blood pressure), decreased heart rate, hypoglycaemia, cardiac failure, tiredness, decreased endurance capacity.
-Permitted alternative: psychological methods (breathing techniques, mental rehearsal) to reduce arousal and aid concentration.
-
-GENE DOPING (PROHIBITED — WADA since 2003):
-What it is: use of substances or techniques to manipulate cells or genes to improve athletic performance. Involves use of nucleic acids or nucleic acid analogues to alter genome sequences or gene expression (gene editing, gene silencing, gene transfer). Also use of normal or genetically modified cells.
-CRISPR-Cas9: gene editing tool — scans DNA and cuts at target site to introduce new genetic sequence. Awarded 2020 Nobel Prize in Chemistry. Could allow athletes to manipulate genetics to improve endurance, speed, strength.
-Repoxygen (2004): segment of DNA designed to stimulate EPO synthesis — would increase red blood cells and O2-carrying capacity.
-Why appealing: proteins from gene doping can be nearly identical to natural proteins — extremely hard to detect.
-Potential harms: largely unknown — athletes would be 'human guinea pigs'.
-Detection: WADA uses 4-year bans, genome sequencing (genetic baseline profiles), PCR testing.
-
-ETHICAL CONSIDERATIONS:
-WADA Anti-Doping Code: bans substances that enhance performance, risk athlete health, or violate spirit of sport.
-Arguments against prohibited use: unfair advantage, amounts to cheating, strips medals (e.g. Lance Armstrong — 7 Tour de France titles stripped; Kim Jong-Su — 2 medals stripped at 2008 Beijing Olympics).
-Arguments for permitting: ethicist Julian Savulescu argues supervised doping within safe physiological parameters (e.g. haematocrit under 50%) should be allowed, regardless of method.
-Equity issue: altitude training/chambers involve significant costs → athletes from less privileged backgrounds may not have equal access. Is the playing field level even before prohibited substances are used?
-
-SOCIOCULTURAL INFLUENCES on use of performance-enhancing substances:
-Prestige and fame; financial rewards and endorsements; cultural beliefs; pressure from coaches, family, media; peers' success with prohibited substances; national/political ideals; lack of recovery time; education.
-Famous examples:
-Tour de France: culture of doping (EPO, blood doping) — Lance Armstrong admitted doping offences; Chris Froome constantly questioned despite 2015 win.
-Essendon FC (2016): 34 players received 12-month WADA suspensions for 2012 supplements program. Led to major governance reforms in Australian sport.
-Russia: state-sanctioned doping scandal — Russia banned from multiple Olympics. Athletes competed as ROC 'neutrals'.
-
-Exam tip: When explaining sociocultural influences, link to a SPECIFIC example from sport (e.g. Tour de France, Essendon saga, Russian doping). This demonstrates application of understanding.` },
+Sociocultural influences on doping use: prestige and fame, financial rewards, pressure from coaches, peers' success with prohibited substances, national/political ideals, lack of recovery time, education.` },
       ]},
-      // ── CH 7 ──
-      { id:"u12_ch7", name:"Chapter 7", topics:[
-        { id:"u12_ch7_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u12_ch7_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
+      // ── CH 7: Physical Activity & Sedentary Behaviour: Sociocultural Influences ──
+      { id:"u12_ch7", name:"Physical Activity & Society", topics:[
+        { id:"u12_ch7_t1", name:"Types of Physical Activity", icon:"🏃", description:"Play, games, sports, transport, exercise, chores & recreational activities", available:true, content:`Physical activity: any movement of the body produced by skeletal muscles, resulting in energy expenditure.
+
+Types of physical activity:
+PLAY: Activities engaged in for enjoyment and recreation rather than a serious or practical purpose. Characteristics: spontaneous, enjoyable, flexible, intrinsically motivated. Examples: playground games, monkey bars, sandbox play.
+
+GAMES: Activities engaged in for enjoyment. Characteristics: rules exist, goal-oriented. Examples: virtual reality games, octopus tag, yard games.
+
+SPORTS (FORMAL): Activities involving physical exertion and skill, in which an individual or team competes against another or others for entertainment. Characteristics: highly organised, structured, strict rules, competitive. Examples: Australian Rules football, basketball, soccer, tennis.
+
+INFORMAL SPORTS: Self-organised activities with adaptable rules and organisation. Characteristics: self-organised, casual, flexible rules, less structured, operates independently from formal structures. Examples: street soccer, 3-on-3 basketball, beach cricket, spikeball at the beach.
+
+TRANSPORTATION: Travel between destinations that involves physical movement. Characteristics: practical, purpose-driven. Examples: walking, cycling, running, skateboarding.
+
+EXERCISE: Activities requiring physical effort that are carried out to sustain or improve health and fitness. Characteristics: health-focused, routine, involves physical exertion. Examples: aerobics, weightlifting, running, cycling.
+
+CHORES: Routine tasks, for example, jobs done around the home. Characteristics: repetitive, task-oriented, necessary. Examples: gardening, cleaning, grocery shopping.
+
+RECREATIONAL ACTIVITIES: Leisure activities. Leisure is discretionary time outside of work and study commitments. Characteristics: relaxing, fun, diverse. Examples: fishing, dancing, sky-diving, surfing, paragliding, scuba diving.
+
+How physical activity changes across the lifespan: Young children are physically active mainly through play and games. Primary school children engage in play, games, PE classes and modified sports. Teenagers prefer sport, active transport, exercise and recreational activities. Adults are most active through sport, active transport, exercise, recreational activities and chores. Older people (65+) are most likely to be active through active transport (mainly walking), recreational activities and chores such as gardening.
+
+Sports participation data (VicHealth, 2021): Organised sports most popular among children aged 4-14 (51% of all sports participants). Participation decreases to 32% during late adolescence. Males generally participate more than females across all ages (17% vs 9%). Regional Victoria has higher participation rates (16%) than metropolitan Melbourne (12%).` },
+        { id:"u12_ch7_t2", name:"Benefits of Physical Activity", icon:"💚", description:"Physical, mental, emotional, social & spiritual benefits", available:true, content:`Regular physical activity benefits five key dimensions of health and wellbeing.
+
+PHYSICAL BENEFITS: Reduces risk of chronic and life-threatening conditions including diabetes mellitus, obesity, cardiovascular disease, osteoporosis, hypertension and some cancers. Key benefits: increased energy levels, healthy body weight, boosted immune system, stronger muscles, improved cardiorespiratory system, healthy bones, reduced health risks.
+
+MENTAL BENEFITS: Mental health and wellbeing relates to the ability to think and process information. Regular physical activity: reduces impact of stress-related hormones (cortisol); improves concentration; leads to more optimistic thinking and efficient information processing; boosts self-confidence by helping achieve goals; reduces risk of obesity, cultivating self-esteem. Schools with more regular PE classes show proven academic gains. Mental benefits: positive thought patterns, self-esteem, improved thinking and information processing, reduced stress, self-confidence.
+
+EMOTIONAL BENEFITS: Emotional health is the ability to express emotions and feelings positively and to display resilience. Regular physical activity releases endorphins, dopamine and norepinephrine to assist mood regulation. PA helps individuals learn to manage frustration, anger and exhilaration — building resilience. Emotional health is "the degree to which you feel emotionally secure and relaxed in everyday life". Benefits: positive mood, resilience, appropriate display of emotions.
+
+SOCIAL BENEFITS: Social health is the ability to form meaningful and satisfying relationships with others and to manage different social situations. Team sport provides opportunities to bond with people sharing a common goal, reducing loneliness and isolation. Benefits: improved communication skills, reduced feelings of isolation and loneliness, wider exposure to new people, improved relationships, increased trust in others.
+
+SPIRITUAL BENEFITS: Spiritual health relates to ideas, values and ethics in human consciousness. Regular physical activity promotes belonging, peace and purpose. Outdoor activities (hiking) allow connection to nature. First Nations Peoples: walking on Country or traditional hunting reinforces cultural connections to land and promotes spirituality. Benefits: deepened connection to nature, enhanced mindfulness and spiritual awareness, elevated state of serenity, improved sense of belonging.` },
+        { id:"u12_ch7_t3", name:"Sociocultural Enablers & Barriers", icon:"🤝", description:"Gender, family, peers, SES, community & cultural norms", available:true, content:`Sociocultural factors encompass social and cultural norms within which people are born, grow, live, work and age. They shape physical activity as both enablers and barriers.
+
+Enabler: something that makes it possible for a particular thing to be done.
+Barrier: something that prevents progress or makes it difficult for an individual to achieve something.
+
+Research identifies those least likely to be physically active: women, people from lower socioeconomic backgrounds, older adults, people born overseas, people with a disability and First Nations Peoples.
+
+FAMILY enablers: active parents/siblings as role models; providing resources (sports equipment, coaching); verbal encouragement; shared activities (hikes, bike rides); creating opportunities. Family barriers: lack of role models, limited resources, absence of encouragement, lack of shared activities.
+
+PEERS enablers: motivation to join friendship group (desire to be part of a social group); support during injury recovery; gym buddy accountability; competitive but friendly rivalries; introducing new activities. Peers barriers: social exclusion (not matching skill proficiency); peer group undervaluing PA, favouring sedentary activities like video gaming.
+
+SOCIOECONOMIC STATUS (SES) — education, occupation and income: SES enablers: higher income = access to diverse facilities and equipment; higher education leads to greater understanding of PA benefits; better transportation to facilities. SES barriers: lower income restricts access to specialised facilities; higher rates of chronic diseases hinder activity; limited transportation options.
+
+GENDER barriers: women under-represented on sports club committees (lack of role models); gender stereotypes (netball/gymnastics labelled female, AFL/rugby labelled male); limited opportunities; societal emphasis on male-dominated sports; limited media coverage and sponsorship for women. These stereotypes are increasingly being challenged — more women now play traditionally male-dominated sports.
+
+CULTURAL NORMS barriers: racial discrimination deters participation; limited opportunities for sports with cultural significance (traditional First Nations games lack formal recognition). Cultural norms enablers: multilingual information; cultural accessibility (e.g. Netball Australia One Netball program); flexibility in programs (e.g. Muslim AFL player Bachar Houli allowed to pray during training); multicultural role models (AFL multicultural round); prevalence of particular sports (swimming in Australia — extensive coastline).
+
+COMMUNITY enablers: regional preferences boost participation (AFL in Victoria vs rugby in Queensland and NSW); safe communities encourage outdoor activity. Community barriers: country towns struggle to fill sporting teams; high crime rates deter outdoor activities.` },
+        { id:"u12_ch7_t4", name:"Guidelines & Assessment Methods", icon:"📊", description:"Australian PA guidelines for all ages, prevalence trends & measurement tools", available:true, content:`The Australian Physical Activity and Sedentary Behaviour Guidelines outline recommended physical activity for each life stage.
+
+Physical inactivity: not meeting daily physical activity guidelines.
+Sedentary behaviour: activities associated with sitting or lying down — watching TV, working on computer, driving, sitting in transit, homework, studying, reading.
+METs (metabolic equivalents): MET of 1 = sedentary; MET of 3-6 = moderate intensity activity.
+
+GUIDELINES SUMMARY:
+Ages 0-1 (infants): supervised interactive floor-based play; at least 30 minutes tummy time per day; reaching and grasping; when mobile — crawling, pulling to standing, walking.
+Ages 1-2: at least 180 minutes of various physical activities per day including energetic play. No sedentary screen time (under 2 years); not restrained more than 1 hour at a time.
+Ages 3-5: at least 180 minutes per day including at least 60 minutes of energetic play. No more than 60 minutes sedentary screen time per day.
+Ages 5-17: at least 60 minutes of moderate to vigorous physical activity per day; vigorous activities and muscle/bone strengthening at least 3 days per week; no more than 120 minutes recreational screen time; 9-11 hours sleep (ages 5-13), 8-10 hours (ages 14-17).
+Ages 18-64: active most/all days; 2.5-5 hours moderate OR 1.25-2.5 hours vigorous per week (or combination); muscle-strengthening activities at least 2 days per week; minimise and break up prolonged sitting.
+Ages 65+: at least 30 minutes moderate intensity activity on most/all days; incorporate muscle-strengthening; break up sitting; be as active as possible.
+
+KEY AUSTRALIAN STATISTICS (2022 National Health Survey):
+- Only 23.9% of people aged 15+ met physical activity guidelines.
+- 46.9% of employed adults 18-64 described their work day as mostly sitting.
+- Ages 5-17: only 5.6% met guidelines (up from 1.9% in 2017-18); males more likely than females (9.9% vs 3.7%).
+- Ages 18-64: 22.4% met guidelines (up from 17.0% in 2017-18); males more likely than females (24.9% vs 19.9%).
+- Ages 65+: 33.4% met guidelines.
+- SES relationship: most disadvantaged adults had 17.2% completing zero minutes of activity vs 7.8% for least disadvantaged.
+
+SUBJECTIVE ASSESSMENT METHODS (rely on person's perception):
+Recall surveys: cost-effective, easy to administer, suitable for large populations. Limitations: poor recall, social desirability bias (exaggerating PA, underestimating sedentary behaviour), not suitable for children under 10 or older adults, no real-time monitoring.
+Diaries: capture detailed data (frequency, intensity, type, time) recorded in real-time. Limitations: burden to complete regularly, social desirability bias, reactivity (temporarily increasing activity levels), harder to compare across respondents.
+Proxy surveys/diaries: adult completing on behalf of those with limited cognitive ability (children under 10, over 80, mental disabilities) — completed by parent, guardian, carer or teacher.
+
+OBJECTIVE ASSESSMENT METHODS (measurable/observable):
+Pedometer: counts steps; cheap, easy to use, records incidental exercise. Limitations: cannot measure intensity, context, upper body movement, swimming or cycling; inaccurate for distance; reactivity.
+Observational tools: SOFIT (System for Observing Fitness Instruction Time) — measures student activity levels, lesson context and teacher behaviour during PE classes; SOPLAY (System for Observing Play and Leisure Activity in Youth) — assesses physical activity in free-play settings (recess, lunch); SOPARC for community settings. Accurate, useful for children; time-consuming and costly.
+Wearable technology: devices with accelerometers and inclinometers (accelerometer measures acceleration/vibration; inclinometry measures angle of slope — determines lying/sitting/standing); measure steps, distance, speed, sedentary behaviour/sleep, energy expenditure, heart rate, activity modes; provide rich real-time data. Can be expensive; some reactivity.
+Digital tools (e.g. Strava): apps on smartphones/tablets; measure activity and sedentary behaviour; allow in-depth data review; require continual internet access.
+
+General principle: higher accuracy = lower practicality (and vice versa). Often two or more assessment tools are used together to increase accuracy.` },
       ]},
-      // ── CH 8 ──
-      { id:"u12_ch8", name:"Chapter 8", topics:[
-        { id:"u12_ch8_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u12_ch8_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
+      // ── CH 8: Strategies to Increase Physical Activity & Reduce Sedentary Behaviour ──
+      { id:"u12_ch8", name:"Promoting Physical Activity", topics:[
+        { id:"u12_ch8_t1", name:"Social-Ecological Model", icon:"🌐", description:"Individual, social environment, physical environment & policy components", available:true, content:`The social-ecological model (SEM) is a framework used to develop, implement and critique health-promotion strategies aimed at improving health by promoting physical activity and limiting sedentary behaviour.
+
+Systems thinking: understanding the world by the ways different entities within a system influence one another. Elements interact (affect each other), are interrelated (factors influence each other) and are interdependent (each depends on others).
+
+THE FOUR COMPONENTS (overlapping layers that interrelate):
+
+1. INDIVIDUAL (centre of the model): personal factors influencing physical activity and sedentary behaviour.
+Knowledge and education: understanding benefits/consequences of physical inactivity leads to greater participation. Inadequate knowledge may lead to increased sedentary behaviour.
+Attitudes and beliefs: positive attitudes promote increased participation, enhanced physical health and sustained motivation. Poor attitudes decrease daily movement (e.g. choosing to drive when walking takes a short time).
+Perceived barriers: recognising barriers allows creative solutions (e.g. at-home exercises when time is limited). Perceived barriers make excuses for sedentary behaviour easier.
+Motor skills: good motor skills increase confidence in physical activities; poor motor skills lower self-esteem and increase likelihood of withdrawing from PA.
+Motivation and enjoyment: intrinsic motivation (inner drive for pleasure/learning rather than external rewards or pleasing others) is strongly associated with higher lifelong activity levels. Lack of motivation leads to sedentary lifestyle.
+Age and gender: culture promoting PA for all ages and genders has positive impact on community participation. Older people may find exercise more difficult due to decreased physical capacity.
+SES of the individual: higher SES = greater access to resources and participation; lower SES may increase sedentary behaviour due to inability to afford equipment or fees.
+Self-efficacy: individuals with high self-efficacy show more resilience in overcoming barriers, leading to persistence and success; low self-efficacy makes sedentary options more appealing.
+Injuries and disabilities: restrict types/intensity of activity; physical limitations can increase sedentary time, especially if severe.
+
+2. SOCIAL ENVIRONMENT: influences from others and social structures.
+Family: active parents/siblings as role models; providing fees, equipment and transport demonstrates high support; inactive family limits exposure to activity opportunities.
+Spouse or partner: shared active leisure encourages fitness; partner preference for sedentary leisure (e.g. watching movies) can influence less activity.
+Peers: motivation to join friendship group; support during injury recovery; gym buddies for accountability; competitive rivalries improve performance; introduction to new activities. Barriers: social exclusion (not matching skill levels); peers undervaluing PA, favouring video gaming.
+Institutions and organisations: schools (PE, sports programs), workplaces (gym memberships, corporate fun runs), local sporting clubs provide supportive environments; lack of institutional support reduces opportunities.
+Social support: communal encouragement motivates higher PA; isolation can lead to withdrawal from PA.
+Healthcare professionals and educators: recommendations from trusted authorities significantly motivate activity.
+Community norms and cultural background: communities valuing PA foster high participation; cultural discouragements especially against women hinder participation.
+SES of the community: higher SES communities have more resources/opportunities; lower SES communities face barriers leading to more sedentary lifestyles.
+
+3. PHYSICAL ENVIRONMENT: natural and human-made environment where physical activity takes place.
+Natural factors: warmer/sunnier climates correlate with more outdoor activity; proximity to beaches/mountains dictates accessible activities; cold/windy conditions with less daylight promote sedentary behaviours.
+Availability and access to facilities: parks, playgrounds, tracks, gymnasiums, sports fields provide necessary infrastructure; limited facilities in rural areas decrease opportunities.
+Aesthetics: attractive environments (flowers, trees, shelter) encourage more outdoor PA; unattractive/poorly maintained environments deter people and promote sedentary behaviour.
+Weather: sunny weather encourages outdoor activities (surfing, running, cycling); extreme weather leads to increased time indoors doing sedentary activities (e.g. watching TV).
+Safety: implementing safety measures (reduced traffic, lighting) encourages walking/cycling; high crime rates, traffic density and unsafe/unlit areas discourage outdoor activity.
+Community design and public transport: walkable neighbourhoods with easy access to shops, public transport and facilities encourage active transport; poorly designed communities discourage walking/cycling, increasing car reliance.
+Geography: natural landscapes (parks, trails) promote walking/hiking; coastal areas promote swimming and surfing.
+
+4. POLICY: recommendations, procedures, regulations and legislation affecting physical activity.
+Urban planning policies: footpaths, bike paths, parks, gardens mandated in urban design; provides infrastructure encouraging walking, cycling and outdoor activities.
+Education policies: mandatory PE in Victorian government schools (100 minutes/week, Years 7-10); bike rack access; sports equipment provision.
+Workplace policies: walk-and-talk meetings, discouraging elevator use, provision of standing desks; encourages employees to be less sedentary.
+Funding policies: government/organisational funding for walking paths, bike lanes; lack of funding limits PA infrastructure.
+
+FOUR CORE PRINCIPLES of the SEM:
+1. Multiple factors influence behaviour — must target all four levels; interventions are more successful when all levels are addressed simultaneously.
+2. Environments are multidimensional and complex — unique features can both encourage and deter PA.
+3. Human-environment interactions occur at varying levels — individuals, small groups, community groups, populations.
+4. Interrelationships are dynamic — individuals affect environments (e.g. many walkers prompt council to build safe paths); environments affect behaviour (e.g. social environment encouraging bike riding influences more people to use active transport).` },
+        { id:"u12_ch8_t2", name:"Population-Based Initiatives", icon:"🏅", description:"Get Active Victoria, Walk to School, This Girl Can, Jump Rope for Heart, Sporting Schools & IMP", available:true, content:`Population-based initiatives use the social-ecological model to promote physical activity. Effective programs target ALL four SEM levels. Intersectoral collaboration (different sectors working together) is key to success.
+
+Stakeholders: individuals/groups with a vested interest in an outcome. Key organisations: VicHealth, Get Active Victoria, local councils, National Heart Foundation, Women's Health Victoria, Australian Sports Commission.
+
+GET ACTIVE VICTORIA — KIDS VOUCHER PROGRAM:
+Goal: enable all Victorians to find enjoyable and suitable ways to be active every day; Kids Voucher targets under-represented groups by providing financial assistance to remove barriers.
+Individual: reduces financial barriers for lower SES children, enhancing motivation and access (e.g. Victorian child uses voucher at Auskick for registration fees).
+Social environment: collaborates with Athletics Victoria, Little Athletics, Scouts Victoria, Basketball Victoria and sporting clubs to provide affordable activities.
+Physical environment: supports access to quality, safe, well-maintained facilities (e.g. athletics tracks via Little Athletics Victoria).
+Policy: provides up to $200 financial aid for membership/registration/participation fees; aligns with Victoria's public health and wellbeing plan.
+
+CQUNIVERSiTY 10,000 STEPS PROGRAM (developed 2001):
+Goal: encourage Australians to complete 10,000 steps per day; accessible via website or mobile app; wearable technology or smartphone can automatically upload data.
+Individual: personal progress tracking for motivation and accountability; educational content on PA benefits.
+Social environment: encourages sharing experiences and participation in competitions to enhance social interaction and support.
+Physical environment: uses social media to highlight walkable places in communities (beaches, local paths, national park hikes, playgrounds, green spaces).
+Policy: funded by Health and Wellbeing Queensland and Preventative Health SA.
+
+VICHEALTH WALK TO SCHOOL PROGRAM (since 2006):
+Goal: encourage students to walk to/from school more often; annual event in October (Term 4); provides awareness of physical, social and environmental benefits of active transport.
+Individual: awareness of physical health benefits of walking; links to Australian PA and Sedentary Behaviour Guidelines; awareness of social and environmental benefits of walking over driving.
+Social environment: encourages students to walk together; local councils provide support, education and funding to schools.
+Physical environment: some councils increase lighting on walking paths to enhance perceived safety; less traffic decreases congestion.
+Policy: VicHealth provides $10,000 funding to local councils; free resources (stickers, pamphlets, app) for schools and students.
+
+VICHEALTH THIS GIRL CAN PROGRAM (launched 2018):
+Goal: inspire all women (cis, trans, non-binary, gender diverse) to be more active without being judged. In 2022, inspired almost 273,000 women to be more active.
+Individual: case studies of successful women who became more active; advice on finding women's group training sessions to reduce psychological barriers.
+Social environment: social media campaigns and local ambassadors make community more supportive for women wanting to increase PA.
+Physical environment: 'Get Active @ Home' educational resources and videos (under 10 minutes to over 30 minutes options), removing barriers of weather and safety concerns.
+Policy: funding to establish/strengthen partnerships with high-profile sporting organisations; funding new, social and flexible activities for Victorian women and girls.
+
+NATIONAL HEART FOUNDATION — JUMP ROPE FOR HEART (since 1983):
+Stats: over 8 million students and 90% of Australian schools participated; approximately 280,000 students and 1400 schools participate annually. Mutually beneficial outcomes for schools and NHF.
+Individual: education about link between exercise and improved health outcomes; teaches skipping skills to increase self-efficacy and motivation.
+Social environment: skipping with peers as motivational tool; teachers provide encouragement and support.
+Physical environment: skipping can be done any time of year, indoors or outdoors, on virtually any surface; school provides the facilities.
+Policy: NHF fully funds skipping ropes and resources at no cost to school; NHF donates some funds back to school.
+
+SPORTING SCHOOLS (Australian government initiative):
+Goal: help schools increase children's participation in sport and connect with community sport opportunities. Programs are free. Partnered with 35+ NSOs and NSODs. Programs for primary schools plus targeted Year 7-8 secondary program.
+Individual: builds confidence, skills and knowledge to increase competence in a range of sports, motivating lifelong activity (e.g. improving confidence in rugby union via tri-tag rugby; flag football).
+Social environment: opportunities for coaches, teachers and peers to interact; engages students from different SES backgrounds.
+Physical environment: funding can be spent on hiring sports facilities outside school property (e.g. pool hire).
+Policy: funded by Australian Sports Commission; grants up to $1,500 per grant for essential equipment; funding can accommodate needs of people with disability.
+
+INDIGENOUS MARATHON PROJECT — IMP (established 2009 by Robert de Castella):
+Goal: uses running to provide empowerment, purpose and pride among First Nations people. A social change program, not a sports program. 12 Aboriginal and Torres Strait Islander people aged 18-30 selected annually to run the New York City Marathon. Since 2009, 142 IMP graduates have run the marathon and become influential community role models.
+Education component (compulsory): Certificate in Indigenous Leadership and Health Promotion; Level 1 Recreational Running Coach Accreditation (Athletics Australia); CPR/first aid; Mental Health First Aid; media training.
+Individual: members push to physical limits, improving capabilities and confidence; program tailored to Indigenous groups.
+Social environment: week-long training camps with influential leaders; supportive network within existing communities.
+Physical environment: four training camps per year providing physical environment conducive to marathon running.
+Policy: IMP covers all costs (travel, accommodation, education, equipment, uniform); heavily funded by Australian government's Department of Health and Aged Care.
+
+DESIGNING YOUR OWN PROGRAM — KEY CONSIDERATIONS:
+Individual: assess fitness level required; ensure accessibility for varying fitness levels; identify and address common barriers (motivation, time constraints, cultural influences).
+Social environment: leverage social networks; collaborate with different sectors/organisations (intersectoral approach); foster community support.
+Physical environment: ensure physical space accommodates all participants safely; evaluate transportation options; consider equipment needs for all participants including those with disabilities.
+Policy: determine funding needs and identify potential sources; establish necessary policies/rules; advocate for policies supporting long-term sustainability.
+
+When CRITIQUING a program using the SEM: identify which levels are addressed; note which are missing or weak; suggest specific improvements linked to each SEM level. Programs must target ALL four levels to be most effective.` },
       ]},
-      // ── CH 9 ──
       { id:"u12_ch9", name:"Chapter 9", topics:[
         { id:"u12_ch9_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
         { id:"u12_ch9_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
       ]},
-      // ── CH 10 ──
       { id:"u12_ch10", name:"Chapter 10", topics:[
         { id:"u12_ch10_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
         { id:"u12_ch10_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
       ]},
-      // ── CH 11 ──
       { id:"u12_ch11", name:"Chapter 11", topics:[
         { id:"u12_ch11_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
         { id:"u12_ch11_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
       ]},
     ]
   },
-
-  /* ============================================================
-     UNIT 3-4  (15 chapters)
-     ============================================================ */
   u34: {
     label: "Unit 3-4",
     chapters: [
-      // ── CH 1 ──
-      { id:"u34_ch1", name:"Chapter 1", topics:[
-        { id:"u34_ch1_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch1_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 2 ──
-      { id:"u34_ch2", name:"Chapter 2", topics:[
-        { id:"u34_ch2_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch2_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 3 ──
-      { id:"u34_ch3", name:"Chapter 3", topics:[
-        { id:"u34_ch3_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch3_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 4 ──
-      { id:"u34_ch4", name:"Chapter 4", topics:[
-        { id:"u34_ch4_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch4_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 5 ──
-      { id:"u34_ch5", name:"Chapter 5", topics:[
-        { id:"u34_ch5_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch5_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 6 ──
-      { id:"u34_ch6", name:"Chapter 6", topics:[
-        { id:"u34_ch6_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch6_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 7 ──
-      { id:"u34_ch7", name:"Chapter 7", topics:[
-        { id:"u34_ch7_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch7_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 8 ──
-      { id:"u34_ch8", name:"Chapter 8", topics:[
-        { id:"u34_ch8_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch8_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 9 ──
-      { id:"u34_ch9", name:"Chapter 9", topics:[
-        { id:"u34_ch9_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch9_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 10 ──
-      { id:"u34_ch10", name:"Chapter 10", topics:[
-        { id:"u34_ch10_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch10_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 11 ──
-      { id:"u34_ch11", name:"Chapter 11", topics:[
-        { id:"u34_ch11_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch11_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 12 ──
-      { id:"u34_ch12", name:"Chapter 12", topics:[
-        { id:"u34_ch12_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch12_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 13 ──
-      { id:"u34_ch13", name:"Chapter 13", topics:[
-        { id:"u34_ch13_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch13_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 14 ──
-      { id:"u34_ch14", name:"Chapter 14", topics:[
-        { id:"u34_ch14_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch14_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
-      // ── CH 15 ──
-      { id:"u34_ch15", name:"Chapter 15", topics:[
-        { id:"u34_ch15_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },
-        { id:"u34_ch15_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null },
-      ]},
+      { id:"u34_ch1", name:"Chapter 1", topics:[{ id:"u34_ch1_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch1_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch2", name:"Chapter 2", topics:[{ id:"u34_ch2_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch2_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch3", name:"Chapter 3", topics:[{ id:"u34_ch3_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch3_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch4", name:"Chapter 4", topics:[{ id:"u34_ch4_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch4_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch5", name:"Chapter 5", topics:[{ id:"u34_ch5_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch5_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch6", name:"Chapter 6", topics:[{ id:"u34_ch6_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch6_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch7", name:"Chapter 7", topics:[{ id:"u34_ch7_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch7_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch8", name:"Chapter 8", topics:[{ id:"u34_ch8_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch8_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch9", name:"Chapter 9", topics:[{ id:"u34_ch9_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch9_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch10", name:"Chapter 10", topics:[{ id:"u34_ch10_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch10_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch11", name:"Chapter 11", topics:[{ id:"u34_ch11_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch11_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch12", name:"Chapter 12", topics:[{ id:"u34_ch12_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch12_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch13", name:"Chapter 13", topics:[{ id:"u34_ch13_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch13_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch14", name:"Chapter 14", topics:[{ id:"u34_ch14_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch14_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
+      { id:"u34_ch15", name:"Chapter 15", topics:[{ id:"u34_ch15_t1", name:"Topic 1", icon:"📖", description:"Add description", available:false, content:null },{ id:"u34_ch15_t2", name:"Topic 2", icon:"📖", description:"Add description", available:false, content:null }]},
     ]
   }
 };
 
-/* ================================================================
-   GAME STATE
-================================================================ */
 const TEAM_COLORS = [
   {bg:"#e63946",text:"#fff"},{bg:"#2196f3",text:"#fff"},
   {bg:"#4caf50",text:"#fff"},{bg:"#ff9800",text:"#fff"},
@@ -1044,9 +897,6 @@ const GAME = {
   getRankedTeams() { return [...this.teams].sort((a,b)=>b.score-a.score); }
 };
 
-/* ================================================================
-   AI ENGINE
-================================================================ */
 const MODEL = "claude-sonnet-4-6";
 
 function buildPrompt(topic, pointValues) {
@@ -1105,9 +955,6 @@ async function generateAll(topics, onProgress) {
   }));
 }
 
-/* ================================================================
-   UI
-================================================================ */
 (function() {
   const c = document.getElementById('stars');
   for (let i=0;i<120;i++) {
@@ -1118,7 +965,6 @@ async function generateAll(topics, onProgress) {
   }
 })();
 
-// Unit card counts
 (function() {
   for (const [key,unit] of Object.entries(UNITS)) {
     const total = unit.chapters.reduce((n,ch)=>n+ch.topics.filter(t=>t.available).length,0);
@@ -1174,7 +1020,6 @@ function toggleTopic(id, row) {
   validateForm();
 }
 
-// Team inputs
 (function(){
   const grid=document.getElementById('teams-grid');
   for (let i=0;i<6;i++) {
@@ -1186,7 +1031,6 @@ function toggleTopic(id, row) {
 })();
 
 function getTeamNames() {
-  // Only return teams that have a name typed in
   return Array.from(document.querySelectorAll('.team-input'))
     .map(i=>i.value.trim())
     .filter(v=>v.length>0);
@@ -1320,7 +1164,6 @@ function revealAnswer() {
 function closeModal() { document.getElementById('modal').classList.remove('open'); }
 
 function exitQuestion() {
-  // Close modal and put the question back — does NOT mark as answered
   document.getElementById('modal').classList.remove('open');
   GAME.currentQuestion = null;
   GAME.phase = 'board';
